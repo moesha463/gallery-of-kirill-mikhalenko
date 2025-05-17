@@ -1,19 +1,10 @@
-import { Outlet } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import './styles/App.css';
+import React from "react";
+import Artworks from "./Components/Artworks";
 
-function App() {
-  return (
-    <div className="app">
-      <Navigation />
-      <main>
-        <Outlet />
-      </main>
-      <footer>
-        <p>&copy; 2025 Kirill Mikhalenko</p>
-      </footer>
+const App = () => (
+    <div className="min-h-screen bg-gray-100">
+        <Artworks />
     </div>
-  );
-}
+);
 
 export default App;
