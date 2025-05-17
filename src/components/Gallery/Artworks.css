@@ -1,0 +1,30 @@
+@font-face {
+    font-family: UniversBold;
+    src: url('../../assets/fonts/UniversBold.ttf');
+}
+@font-face {
+    font-family: Univers;
+    src: url('../../assets/fonts/UniversLight.ttf');
+}
+h2{
+    font-family: UniversBold;
+}
+p{
+    font-family: Univers;
+    line-height: 1.5;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}

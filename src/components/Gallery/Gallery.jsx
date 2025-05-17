@@ -1,14 +1,32 @@
 import React, { useEffect, useState } from "react";
 import ArtworkCard from "./ArtworkCard";
 
+import './Artworks.css'
+
 const apiUrl = "https://script.google.com/macros/s/AKfycbzSKjkpbkqSph1sEpZwR2EzdbY7c88pvIauK_FlOdMDQTDJQZURzP1s47vPpIq4tCZH/exec";
 
-const Artworks = () => {
+const Gallery = () => {
     const [artworks, setArtworks] = useState([]);
-    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [imageCache, setImageCache] = useState({});
 
     useEffect(() => {
+        const preloadImages = async (data) => {
+            const cache = {};
+            await Promise.all(data.map(async (artwork) => {
+                if (artwork.image_url) {
+                    const img = new Image();
+                    img.src = artwork.image_url;
+                    await new Promise((resolve) => {
+                        img.onload = resolve;
+                        img.onerror = resolve; // Resolve even on error to avoid hanging
+                    });
+                    cache[artwork.id] = artwork.image_url;
+                }
+            }));
+            setImageCache(cache);
+        };
+
         fetch(apiUrl)
             .then((response) => response.json())
             .then((data) => {
@@ -16,20 +34,14 @@ const Artworks = () => {
                     setError(data.error);
                 } else {
                     setArtworks(data);
+                    preloadImages(data); // Start preloading images
                 }
-                setLoading(false);
             })
             .catch(() => {
                 setError("Ошибка загрузки данных");
-                setLoading(false);
             });
     }, []);
 
-    if (loading) return (
-        <div className="flex justify-center items-center min-h-screen">
-            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
-        </div>
-    );
     if (error) return <p className="text-center text-red-500">Ошибка: {error}</p>;
 
     return (
@@ -43,4 +55,4 @@ const Artworks = () => {
     );
 };
 
-export default Artworks;
+export default Gallery;
