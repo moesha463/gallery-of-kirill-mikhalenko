@@ -11,7 +11,7 @@ function ArtworkDetail() {
   const [artwork, setArtwork] = useState(null);
 
   useEffect(() => {
-    axios.get('https://script.google.com/macros/s/AKfycbwy-FvF8MkP-oeJ75OkLbfFan2Ch1JWUkjEV23QFTvycCl3LbK-opjXB7JOYc50dVQQ/exec')
+    axios.get('https://script.google.com/macros/s/AKfycbyoGrZ4Ke29I-ODleArUysUlqPRCHu0Fpex4d4BOPxyNJNuu9ICRFWkLG-3y-Ie2iw/exec')
       .then(response => {
         const found = response.data.find(a => a.id === id);
         setArtwork(found);
