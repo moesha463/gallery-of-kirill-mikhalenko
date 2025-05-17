@@ -1,0 +1,22 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --card-background: #f0f0f0;
+  --border-color: #cccccc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

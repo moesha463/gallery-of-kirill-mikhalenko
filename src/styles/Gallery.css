@@ -1,0 +1,34 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.artwork-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  text-align: center;
+}
+
+.artwork-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.artwork-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.artwork-card p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

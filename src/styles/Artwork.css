@@ -1,0 +1,20 @@
+.artwork {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.artwork img {
+  max-width: 100%;
+  height: auto;
+}
+
+.artwork h2 {
+  font-size: 1.8rem;
+  margin: 20px 0 10px;
+}
+
+.artwork p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
