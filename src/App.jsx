@@ -6,6 +6,8 @@ import Gallery from "./components/Gallery/Gallery";
 import Contacts from "./components/Contacts/Contacts";
 import About from "./components/About/About";
 
+import './App.css'
+
 const App = () => {
   return (
     <Router>

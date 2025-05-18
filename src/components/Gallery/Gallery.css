@@ -1,0 +1,52 @@
+@font-face {
+    font-family: UniversBold;
+    src: url('../../assets/fonts/UniversBold.ttf');
+}
+@font-face {
+    font-family: Univers;
+    src: url('../../assets/fonts/UniversLight.ttf');
+}
+h2{
+    font-family: UniversBold;
+}
+p{
+    font-family: Univers;
+    line-height: 1.5;
+}
+.gallery-container {
+    position: relative;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.page-loader {
+    width: 100%;
+    max-width: 800px;
+    height: 4px;
+    background-color: #ccc;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    animation: loading-animation 1.5s infinite;
+}
+
+@keyframes loading-animation {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
