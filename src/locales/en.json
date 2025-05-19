@@ -1,4 +1,13 @@
 {
+    "header": {
+        "biography": "Biography",
+        "petroleumPaintings": "Petroleum paintings",
+        "exhibitions": "Exhibitions",
+        "collaboration": "Collaboration with Brands",
+        "nft": "NFT",
+        "publications": "Publications in Journals",
+        "contacts": "Contacts"
+    },
     "biography": {
         "title": "Biography",
         "artistName": "Kiryl Mikhalenka",

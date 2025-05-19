@@ -1,4 +1,13 @@
 {
+    "header": {
+        "biography": "Биография",
+        "petroleumPaintings": "Картины, написанные нефтью",
+        "exhibitions": "Выставки",
+        "collaboration": "Коллаборация с брендами",
+        "nft": "NFT",
+        "publications": "Публикации в журналах",
+        "contacts": "Контакты"
+    },
     "biography": {
         "title": "Биография",
         "artistName": "Михаленко Кирилл",
