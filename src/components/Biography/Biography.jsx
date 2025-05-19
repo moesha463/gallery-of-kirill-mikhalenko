@@ -11,21 +11,21 @@ const Biography = () => {
     {
       title: t("documents.award.title"),
       description: t("documents.award.description"),
-      image: "https://3.downloader.disk.yandex.ru/preview/95d2a9e67730b116647e9b019051e091dd1dddc3fe2469457413842166b7a282/inf/fX6RZPMsWKv-9w6OlvpRObt59YEdTT-zQ6SjaDk57SXzgRGwhH4tzEp-v0cvDo8Pbhi4tzDjARUcaPNvtbTgrw%3D%3D?uid=922834399&filename=IMG_7777.JPG&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=922834399&tknv=v3&size=2850x1282",
+      image: "../../../public/assets/images/docsAward.JPG",
       imageAlt: t("documents.award.imageAlt"),
       id: 1,
     },
     {
       title: t("documents.thanks.title"),
       description: t("documents.thanks.description"),
-      image: "https://2.downloader.disk.yandex.ru/preview/f411cbfc24add1d45144692b09e607a33a274be9c53c40e3d953034111754e8f/inf/xu4qf48ggUjGD7nCFX6GHLt59YEdTT-zQ6SjaDk57SV7zZq_XlcRQHeShT8lWWmzrE4ACZxkf6LfFUpu2ihzWw%3D%3D?uid=922834399&filename=IMG_7778.JPG&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=922834399&tknv=v3&size=2850x1282",
+      image: "../../../public/assets/images/docsThanks.JPG",
       imageAlt: t("documents.thanks.imageAlt"),
       id: 2,
     },
     {
       title: t("documents.membership.title"),
       description: t("documents.membership.description"),
-      image: "https://2.downloader.disk.yandex.ru/preview/cd1bc723e6b12ef1ce8aab6f8774b7e6100205adc60df5dc1e1a62fb7c9e6f5c/inf/6QZ-p8qEhIrKSGloGbreMbt59YEdTT-zQ6SjaDk57SWfGivMB9kkzNCztqTNtXriCtGGXHlsHlnd5G84czePjg%3D%3D?uid=922834399&filename=IMG_7779.JPG&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=922834399&tknv=v3&size=2850x1282",
+      image: "../../../public/assets/images/docsMembership.JPG",
       imageAlt: t("documents.membership.imageAlt"),
       id: 3,
     },
@@ -58,7 +58,7 @@ const Biography = () => {
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
         <div className="md:w-1/3 flex justify-center md:justify-center order-1 md:order-2 items-center md:items-start">
           <img
-            src="https://3.downloader.disk.yandex.ru/preview/d0aeedc4a5322c37743468e185daf4e905794d30fa1291129585f6f5b3aeba8b/inf/TXonizFzKsci6mMWAGvn27t59YEdTT-zQ6SjaDk57SVFdjKAc73ljk0GMrAz7yx29_3F2rtcndcpPDckLGyvsg%3D%3D?uid=922834399&filename=IMG_7845.JPG&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=922834399&tknv=v3&size=2850x1282"
+            src="../../../public/assets/images/authorPhoto.jpg"
             alt={t("biography.photoAlt")}
             className="w-full max-w-xs h-auto object-contain"
           />
