@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import ArtworkCard from "./ArtworkCard";
+import { useTranslation } from "react-i18next";
 import './Gallery.css';
 
 const apiUrl = "https://script.google.com/macros/s/AKfycbzSKjkpbkqSph1sEpZwR2EzdbY7c88pvIauK_FlOdMDQTDJQZURzP1s47vPpIq4tCZH/exec";
 
 const Gallery = () => {
+    const { t } = useTranslation();
+
     const [artworks, setArtworks] = useState([]);
     const [error, setError] = useState(null);
     const [imageCache, setImageCache] = useState({});
@@ -49,7 +52,7 @@ const Gallery = () => {
             <div className="flex justify-center mb-12">
                 <div className="bg-white border-6 border-black flex items-center justify-center">
                     <h1 className="text-3xl font-regular uppercase text-center px-4 py-2">
-                        Gallery
+                        {t('header.petroleumPaintings')}
                     </h1>
                 </div>
             </div>

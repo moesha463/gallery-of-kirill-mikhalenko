@@ -5,7 +5,7 @@
         "exhibitions": "Exhibitions",
         "collaboration": "Collaboration with Brands",
         "nft": "NFT",
-        "publications": "Publications in Journals",
+        "publications": "Magazine publication",
         "contacts": "Contacts"
     },
     "biography": {
@@ -27,53 +27,69 @@
         "eventsTitle": "Exhibitions and Projects",
         "events": [
             {
-                "year": "Since 2025",
-                "event": "Member of the Belarusian Union of Designers"
-            },
-            {
-                "year": "2018-2021",
-                "event": "Member of the Russian Union of Artists"
-            },
-            {
-                "year": 2024,
-                "event": "Festival of Contemporary Art, Zaraysk, Moscow Region. Curated by Askeri Gallery and Artonline24."
-            },
-            {
-                "year": 2023,
-                "event": "Exhibition at NFT Factory, Paris. Digital art."
-            },
-            {
-                "year": 2023,
-                "event": "Luch watch collection, Minsk."
-            },
-            {
-                "year": 2023,
-                "event": "Collaboration with skateboard brand 375."
-            },
-            {
-                "year": 2022,
-                "event": "Lexus NX presentation, custom clothing."
-            },
-            {
-                "year": 2021,
-                "event": "Collaboration with INGLOT, limited edition palettes."
-            },
-            {
-                "year": 2021,
-                "event": "'Naivety' fashion show (26 outfits), Falcon Club."
-            },
-            {
-                "year": 2019,
-                "event": "Charity exhibition 'Love Acts,' Art House, Minsk."
-            },
-            {
-                "year": 2018,
-                "event": "Exhibition 'Promotion,' Vashchenko Gallery, Gomel."
-            },
-            {
-                "year": 2012,
-                "event": "Participation in the Unicef 'Different Views' contest."
-            }
+"year": "Since 2025",
+"event": "Member of the Belarusian Union of Designers"
+},
+{
+"year": "2018-2021",
+"event": "Member of the Russian Union of Artists"
+},
+{
+"year": 2024,
+"event": "Contemporary art festival in Zaraysk, Moscow region. Exhibited 12 works curated by Askeri Gallery and Artonline24."
+},
+{
+"year": 2023,
+"event": "Exhibition in Paris - Gallery opposite the Georges Pompidou Center NFT Factory. Exhibited his digital art NFT, created in the first months of his stay in Paris. Gallery NFT Factory, Paris, France."
+},
+{
+"year": 2023,
+"event": "Luch Watch Factory, a watch collection created based on sketches by Kirill Mikhalenko. The dials depict paintings, three bright drawings, Minsk."
+},
+{
+"year": 2023,
+"event": "Collaboration with the skateboard brand 375. The boards feature a picture called 'Animal Planet'."
+},
+{
+"year": 2022,
+"event": "Lexus – presentation of the new NX car, made customized clothing for Lexus by individual order and held an exhibition in Minsk."
+},
+{
+"year": 2021,
+"event": "Collaboration with the global cosmetics brand INGLOT, a limited collection of universal palettes Freedom System Art Edition 2021. With an image of the artist's painting."
+},
+{
+"year": 2021,
+"event": "Show of the collection 'Naivety' of 26 clothing looks. Falcon Club Arena, ANNModels."
+},
+{
+"year": 2021,
+"event": "Joint show with E. Volkova of a collection of 10 looks 'Naivety' Brand fashion show, Beijing Hotel, Minsk. Brand Fashion Show."
+},
+{
+"year": 2019,
+"event": "Charity exhibition in the Art House gallery 'Love Works', Minsk."
+},
+{
+"year": 2018,
+"event": "Exhibition 'Promotion', Gomel, Vashchenko Gallery."
+},
+{
+"year": 2017,
+"event": "Exhibition together with the 'Belarusian Union of Artists'. Gomel, DK Zheleznodorozhnikov."
+},
+{
+"year": 2017,
+"event": "Joint exhibition in the Center for Contemporary Art, Vitebsk, 'Music for the Eyes'."
+},
+{
+"year": 2017,
+"event": "Joint exhibition 'Symbiosis'. Belarus, Gomel. Palace of Culture."
+},
+{
+"year": 2012,
+"event": "Participation in the international competition, together with the Polish Committee of the Peoples of UNICEF 'Other Views'."
+}
         ]
     },
     "documents": {
