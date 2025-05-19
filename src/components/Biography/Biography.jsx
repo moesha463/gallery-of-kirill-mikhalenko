@@ -10,7 +10,7 @@ const Biography = () => {
     {
       title: t("documents.award.title"),
       description: t("documents.award.description"),
-      image: "/assets/images/authorPhoto.jpg",
+      image: "/images/authorPhoto.jpg",
       imageAlt: t("documents.award.imageAlt"),
       id: 1,
     },
