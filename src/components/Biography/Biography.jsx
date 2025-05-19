@@ -10,7 +10,7 @@ const Biography = () => {
     {
       title: t("documents.award.title"),
       description: t("documents.award.description"),
-      image: "https://lh3.google.com/u/0/d/1V9jKG4YSjwybI1H3814qwsHCr4X3SGE9=w2880-h1282-iv1?auditContext=prefetch",
+      image: "/images/authorPhoto.jpg",
       imageAlt: t("documents.award.imageAlt"),
       id: 1,
     },

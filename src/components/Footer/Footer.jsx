@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-content">
-                <div className="footer-logo uppercase">Kiryl Mikhalenko</div>
+                <div className="footer-logo uppercase">Kiryl Mikhalenka</div>
 
                 <div className="footer-socials">
                     <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
@@ -27,10 +27,10 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-email">
-                    <a href="mailto:info@mio.com">info@mio.com</a>
+                    <a href="mailto:info@mio.com"></a>
                 </div>
 
-                <p className="footer-text">© 2025 MIO. {t("copyright")}</p>
+                <p className="footer-text">© 2025</p>
             </div>
         </footer>
     );
