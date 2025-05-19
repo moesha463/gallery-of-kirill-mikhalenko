@@ -10,21 +10,21 @@ const Biography = () => {
     {
       title: t("documents.award.title"),
       description: t("documents.award.description"),
-      image: "/assets/images/authorPhoto.jpg",
+      image: "/assets/images/docsAward.JPG",
       imageAlt: t("documents.award.imageAlt"),
       id: 1,
     },
     {
       title: t("documents.thanks.title"),
       description: t("documents.thanks.description"),
-      image: "https://lh3.google.com/u/0/d/15eAJQUdRs5-lpuUGY1r4QmwvO4JX8D3i=w2880-h1282-iv1?auditContext=prefetch",
+      image: "/assets/images/docsThanks.JPG",
       imageAlt: t("documents.thanks.imageAlt"),
       id: 2,
     },
     {
       title: t("documents.membership.title"),
       description: t("documents.membership.description"),
-      image: "https://lh3.google.com/u/0/d/16fUVp89LkqpXWbJta4y-HOZ-35lh7LaM=w2880-h1282-iv1?auditContext=prefetch",
+      image: "/assets/images/docsMembership.JPG",
       imageAlt: t("documents.membership.imageAlt"),
       id: 3,
     },
@@ -85,7 +85,7 @@ const Biography = () => {
         <div className="flex flex-col md:flex-row gap-8 items-stretch">
           <div className="md:w-1/2 flex justify-center md:justify-start">
             <img
-              src="https://lh3.google.com/u/0/d/1KSYDGy7ap3uDT_7fSKzcCbguUfRnLoLK=w2378-h1282-iv1?auditContext=prefetch"
+              src="/assets/images/authorPhoto.jpg"
               alt={t("biography.photoAlt")}
               className="w-full h-full object-contain p-5"
             />
