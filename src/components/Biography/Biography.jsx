@@ -11,21 +11,21 @@ const Biography = () => {
     {
       title: t("documents.award.title"),
       description: t("documents.award.description"),
-      image: "/src/assets/images/docsAward.JPG",
+      image: "/public/assets/images/docsAward.JPG",
       imageAlt: t("documents.award.imageAlt"),
       id: 1,
     },
     {
       title: t("documents.thanks.title"),
       description: t("documents.thanks.description"),
-      image: "/src/assets/images/docsThanks.JPG",
+      image: "/public/assets/images/docsThanks.JPG",
       imageAlt: t("documents.thanks.imageAlt"),
       id: 2,
     },
     {
       title: t("documents.membership.title"),
       description: t("documents.membership.description"),
-      image: "/src/assets/images/docsMembership.JPG",
+      image: "/public/assets/images/docsMembership.JPG",
       imageAlt: t("documents.membership.imageAlt"),
       id: 3,
     },
@@ -58,7 +58,7 @@ const Biography = () => {
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
         <div className="md:w-1/3 flex justify-center md:justify-center order-1 md:order-2 items-center md:items-start">
           <img
-            src="/src/assets/images/authorPhoto.jpg"
+            src="/public/assets/images/authorPhoto.jpg"
             alt={t("biography.photoAlt")}
             className="w-full max-w-xs h-auto object-contain"
           />
