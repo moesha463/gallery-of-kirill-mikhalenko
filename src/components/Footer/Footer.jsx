@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-content">
-                <div className="footer-logo">MIO</div>
+                <div className="footer-logo uppercase">Kiryl Mikhalenko</div>
 
                 <div className="footer-socials">
                     <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">

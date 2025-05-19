@@ -1,7 +1,69 @@
 {
-    "welcome": "Welcome to MIO",
-    "gallery": "Gallery",
-    "contact": "Contact Us",
-    "about": "About Me",
-    "copyright": "All rights reserved."
+    "biography": {
+        "title": "Biography",
+    "paragraph1": "Kirill Mikhalenko, born on September 7, 1998, in Rechitsa, Gomel Region, Belarus, hails from a family of oil industry workers. The Gomel Region is renowned for its oil deposits and extraction. Kirill uses exclusively natural materials, with paintings created using oil not only serving as artistic works but also as powerful symbols of contemporary reality. By employing this medium, Kirill aims to reveal the multifaceted aspects of our lives and society.",
+    "paragraph2": "Oil represents the abundance of resources that has led to economic prosperity and technological progress on one hand, but ecological disasters and social conflicts on the other. This choice of material is an attempt to visualize this paradox. Each painting serves as a reminder of how we often ignore the consequences of our actions. Using oil as a painting medium illustrates the interaction between humanity and nature. Oil, the result of millions of years of natural transformation, makes these paintings a metaphor for destruction and restoration.",
+    "paragraph3": "Kirill hopes viewers will see not only beauty in these works but also the necessity to reflect on and reconsider our relationship with the planet’s resources. Oil evokes strong emotions—desire, fear, or anxiety. These artworks convey this emotional tension, creating a visual dialogue about what it means to be part of a world filled with contradictions. The goal is to provoke reflection on how each of us contributes to the existing system and its impact on the world around us. Thus, each oil painting becomes a multilayered work, laden with meaning and calling for contemplation.",
+    "eventsTitle": "Key events",    
+    "events": [
+            {
+                "year": 2024,
+                "event": "Festival of Contemporary Art, Zaraysk, Moscow region. Curated by Askeri Gallery and Artonline24."
+            },
+            {
+                "year": 2023,
+                "event": "Exhibition at NFT Factory, Paris. Digital art display."
+            },
+            {
+                "year": 2023,
+                "event": "Watch collection for Luch, Minsk."
+            },
+            {
+                "year": 2023,
+                "event": "Collaboration with skateboard brand 375."
+            },
+            {
+                "year": 2022,
+                "event": "Lexus NX launch, custom clothing design."
+            },
+            {
+                "year": 2021,
+                "event": "Collaboration with INGLOT, limited edition palettes."
+            },
+            {
+                "year": 2021,
+                "event": "'Naivety' fashion show (26 outfits), Falcon Club."
+            },
+            {
+                "year": 2019,
+                "event": "Charity exhibition 'Love Acts,' Art House, Minsk."
+            },
+            {
+                "year": 2018,
+                "event": "Exhibition 'Promotion,' Vashchenko Gallery, Gomel."
+            },
+            {
+                "year": 2012,
+                "event": "Participation in Unicef 'Different Views' contest."
+            }
+        ]
+    },
+    "documents": {
+        "title": "Achievements",
+        "award": {
+            "title": "Award for participation in the Unicef drawing competition",
+            "description": "Membership in the Russian Union of Artists.",
+            "imageAlt": "Certificate of the Russian Union of Artists"
+        },
+        "thanks": {
+            "title": "Acknowledgment for charity auction support",
+            "description": "Official acknowledgment document.",
+            "imageAlt": "Acknowledgment for participation in the auction"
+        },
+        "membership": {
+            "title": "Fine Arts Education Diploma",
+            "description": "Diploma of Gomel Art College.",
+            "imageAlt": "Diploma in Fine Arts Education"
+        }
+    }
 }

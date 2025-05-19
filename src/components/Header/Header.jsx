@@ -21,8 +21,8 @@ const Header = () => {
   return (
     <header className="w-full">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="text-4xl font-bold">
-          MIO
+        <Link to="/" className="text-4xl font-bold uppercase">
+          Kiryl Mikhalenko
         </Link>
 
         <button onClick={toggleMenu} className="text-3xl focus:outline-none md:hidden">
@@ -37,7 +37,7 @@ const Header = () => {
           </button>
           <div className="header-burger1 flex flex-col items-end justify-center h-full space-y-6 pr-8">
             <Link to="/" className="text-black text-2xl hover:text-gray-700" onClick={toggleMenu}>
-              Home
+              Biography
             </Link>
             <Link to="/gallery" className="text-black text-2xl hover:text-gray-700" onClick={toggleMenu}>
               Gallery
@@ -70,10 +70,9 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* Desktop menu */}
         <nav className="header-burger2 hidden md:flex md:items-center md:space-x-6">
           <Link to="/" className="text-black hover:text-gray-700">
-            Home
+            Biography
           </Link>
           <Link to="/gallery" className="text-black hover:text-gray-700">
             Gallery
