@@ -110,6 +110,8 @@ const Biography = () => {
           <p className="text-2xl mb-4 text-justify">{t("biography.regularParagraph5")}</p>
           <p className="text-2xl mb-4 text-justify">{t("biography.regularParagraph6")}</p>
           <p className="text-2xl mb-4 text-justify">{t("biography.regularParagraph7")}</p>
+          <p className="text-2xl mb-4 text-justify">{t("biography.regularParagraph8")}</p>
+          <p className="text-2xl mb-4 text-justify">{t("biography.regularParagraph9")}</p>
         </div>
       </div>
 
