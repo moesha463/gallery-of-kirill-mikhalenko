@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-
-import './Biography.css'
+import './Biography.css';
 
 const Biography = () => {
   const { t } = useTranslation();
@@ -11,21 +10,21 @@ const Biography = () => {
     {
       title: t("documents.award.title"),
       description: t("documents.award.description"),
-      image: "https://lh3.googleusercontent.com/fife/ALs6j_EOYNTQtsj204EPRlRA6BRpLw6GABAqBneOY50tHUFHcblz-oP2mvCoxcHplXnC4DHh_XmYhelR1Q5ltddvTc0RQxJnnTJql2FFud6C52AfEu0J3nv9jOIlqBOUmQLd1L-r7P4RDYWLTG8RwNDfCxvm2zClg-zBPB97Uu643poP8i-xNN9FFKr-V_MGqcHqvfF7rjNfCyu3HTdjkg5rL47Qj4gl8QPetPI73Ksk9kYODWnwEGhjwQjPDCAYoW6Va5P3PYp_SdshtkIK8bQVMiI1JjFmGjgeYFIhW1GmuiLoLwXnFt1BeMZKw6BRr9ZwVWvENmVXqudc-yqznJjoEtLnBeD5PWZ8dtZ16OOVfYa8qFNjDB9ZR8Rc8Ah35nydi2YSWNPd40jEZgEdp0gGFTNeLBoqv2SwuFUmUAdIpAgIrS0lyI_yyMYzzJ16ykbH0Lu6Lbg7Re0x9KFFuJ3VESsVn8vV48nQTUmD_LkzkQ79WcsNnadhhLBY0TDNxQxcKQj-WdJ2tSkU2U_RO3Ohug_EFDEhr3pSghlTXoqqADJPykPdFbQlHST7b6UC1CDFvl2WU87n1RhHbtlqYFTLRkdWJn4dfahEb8FcwRsIzVNj4ZPWwEMDIhbX8HT0RmiNJfT2apt79hZcF38sOxGPxN3j83ErXh_m774W81OQnlbNRWgH3IjkO5tsZPd1PcQfUhw13mBtuwByMtrJd0KrpWsAWYDeDP8nAExdbco_xn_LBDz557ktjUa9v4_AO3O7pONvVPJbQNEvK_kkxBIC0run4LHuRzDAzZJ5OD4bUE5SNsJlVBQCFTTxpbUgd13dZRPdy4rBskO_l9v2OH0XNXbUUkPun9UyGdk6-xiEoftk1bDwiUXw1qn9H4sNQCWEWc91zabwGebJmNxSL3CM7X6MOo5K_KyGajDkJ1Bj0q-PFBJiJmEAJiWIGFMWMLancPwvJEb-Bm8Svdq0Y9Zk8uUz1YCuFWdqMYmqIpWLj_PrrBoluVZNldWZp21qB6UrKnWR-Eh08odS_sSgiaWhflCxxURlZHEjkXXW65wQdGcE6lDS0OWj2ZKlJsFlsUp_NXjuwCjz40zKpza8FQU0YS9VZQOsAnqkfkOm6-cOhXl0cGXGlJp6anEdNFaJu208d5juGYZ0fT8en6jDdhe1FzqdY1RUT3EI2Wui8fQDIvdx2T7YswKwmw9w8vBvqf5WxA8IvdBVoK0ktLPiBM42r7wllufg9HTCGCT19uZpTFhD02Hbu_QymwOkEoMa1Mzm5M1POVICt5BmWeAtFN9mYFVZdkGn8FxWMKVNEz3nAnG675H3Ix0PM99KNB8oAQ_MP543tqiAlS_Ds0beN7cjpejXwFy53T_-u1yBSGatdOTGwv4aILDQPGKQFVfZnZkw-UuuvTAh1p-8Acfk7cNKWVzak6q4UJGtelGANi4LPDBeWamZtj4yzolm6xEwzV7xnt4WvGCzREdOcf18MlmpNHMzDKd0B3O2qiByj9pZhBYHuRtadj0vugebrM14EG7IBj_ZGjt_8g-zSV2UJv88losnK7b3wWmH0gcIiXujnD-llgiS4h348mnowv0sNyhvYt1X92ch4k4l_AxEqHxIRW7CUdiNq06eSWMSTvrSM54qC4B7qqj0zqmgq3MEePMEmMNMr4YNg9KzbgzpCcBZEUHehS2GGIQ9pSrA1U-9COv4cSWVDZjHJ69BXj1Ap2kL5dI=w2880-h1282?auditContext=prefetch",
+      image: "https://lh3.google.com/u/0/d/1V9jKG4YSjwybI1H3814qwsHCr4X3SGE9=w2880-h1282-iv1?auditContext=prefetch",
       imageAlt: t("documents.award.imageAlt"),
       id: 1,
     },
     {
       title: t("documents.thanks.title"),
       description: t("documents.thanks.description"),
-      image: "src/assets/images/docsThanks.JPG",
+      image: "https://lh3.google.com/u/0/d/15eAJQUdRs5-lpuUGY1r4QmwvO4JX8D3i=w2880-h1282-iv1?auditContext=prefetch",
       imageAlt: t("documents.thanks.imageAlt"),
       id: 2,
     },
     {
       title: t("documents.membership.title"),
       description: t("documents.membership.description"),
-      image: "src/assets/images/docsMembership.JPG",
+      image: "https://lh3.google.com/u/0/d/16fUVp89LkqpXWbJta4y-HOZ-35lh7LaM=w2880-h1282-iv1?auditContext=prefetch",
       imageAlt: t("documents.membership.imageAlt"),
       id: 3,
     },
@@ -55,19 +54,35 @@ const Biography = () => {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
-        <div className="md:w-1/3 flex justify-center md:justify-center order-1 md:order-2 items-center md:items-start">
-          <img
-            src="src/assets/images/authorPhoto.jpg"
-            alt={t("biography.photoAlt")}
-            className="w-full max-w-xs h-auto object-contain"
-          />
+      <div className="max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-8 items-stretch">
+          <div className="md:w-1/2 flex justify-center md:justify-start">
+            <img
+              src="https://lh3.google.com/u/0/d/1KSYDGy7ap3uDT_7fSKzcCbguUfRnLoLK=w2378-h1282-iv1?auditContext=prefetch"
+              alt={t("biography.photoAlt")}
+              className="w-full h-full object-contain p-5"
+            />
+          </div>
+          <div className="md:w-1/2 flex flex-col justify-between">
+            <div>
+              <h2 className="text-5xl font-semibold w-full">{t("biography.artistName")}</h2>
+              <div className="w-24 h-0.5 bg-black my-4"></div>
+              <p className="text-3xl italic font-bold w-full">{t("biography.artistTitle")}</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold mt-4 mb-4 w-full text-justify">{t("biography.boldParagraph1")}</p>         
+              <p className="text-2xl mb-4 w-full text-justify">{t("biography.regularParagraph1")}</p>
+            </div>
+          </div>
         </div>
-
-        <div className="md:w-2/3 text-lg leading-relaxed order-2 md:order-1">
-          <p className="mb-6">{t("biography.paragraph1")}</p>
-          <p className="mb-6">{t("biography.paragraph2")}</p>
-          <p className="mb-6">{t("biography.paragraph3")}</p>
+        <div className="mt-6 leading-relaxed">
+          <p className="text-2xl mb-4 text-justify">{t("biography.regularParagraph2")}</p>
+          <p className="text-2xl mb-4 text-justify">{t("biography.regularParagraph3")}</p>
+          <p className="text-2xl mb-4 font-bold text-justify">{t("biography.boldParagraph2")}</p>
+          <p className="text-2xl mb-4 text-justify">{t("biography.regularParagraph4")}</p>
+          <p className="text-2xl mb-4 text-justify">{t("biography.regularParagraph5")}</p>
+          <p className="text-2xl mb-4 text-justify">{t("biography.regularParagraph6")}</p>
+          <p className="text-2xl mb-4 text-justify">{t("biography.regularParagraph7")}</p>
         </div>
       </div>
 
@@ -76,22 +91,12 @@ const Biography = () => {
           {t("biography.eventsTitle", { defaultValue: "Key Events" })}
         </h2>
         <div className="relative">
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 h-full"></div>
           {t("biography.events", { returnObjects: true }).map((event, index) => (
-            <div
-              key={index}
-              className={`mb-6 ${
-                index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
-              } flex flex-col md:flex-row items-center relative`}
-            >
-              <div className="w-full md:w-5/12 bg-gray-100 p-4 rounded-lg shadow-none hover:bg-gray-200 transition cursor-pointer">
+            <div key={index} className="mb-6 flex flex-col items-center relative">
+              <div className="w-full bg-gray-100 p-4 rounded-lg shadow-none hover:bg-gray-200 transition cursor-pointer">
                 <h3 className="text-lg font-medium text-gray-800">{event.year}</h3>
-                <p className="text-sm text-gray-600 mt-2">{event.event}</p>
+                <p className="text-lg text-gray-600 mt-2">{event.event}</p>
               </div>
-              <div className="hidden md:flex md:w-2/12 justify-center">
-                <div className="w-4 h-4 bg-black rounded-full z-10"></div>
-              </div>
-              <div className="hidden md:block md:w-5/12"></div>
             </div>
           ))}
         </div>
@@ -104,8 +109,7 @@ const Biography = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {documents.map((doc) => (
             <div
-              key={doc.id}
-              className="bg-gray-100 p-4 shadow-none cursor-pointer hover:bg-gray-200 transition"
+              className="bg-gray-100 p-4 shadow-none cursor-pointer rounded-lg hover:bg-gray-200 transition"
               onClick={() => openFullscreen(doc)}
             >
               <img
@@ -116,7 +120,6 @@ const Biography = () => {
               <h3 style={{ lineHeight: 1.2 }} className="text-lg font-medium">
                 {doc.title}
               </h3>
-              <p className="text-sm text-gray-600">{doc.description}</p>
             </div>
           ))}
         </div>

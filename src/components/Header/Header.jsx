@@ -22,7 +22,7 @@ const Header = () => {
     <header className="w-full">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="text-4xl font-bold uppercase">
-          Kiryl Mikhalenko
+          Kiryl Mikhalenka
         </Link>
 
         <button onClick={toggleMenu} className="text-3xl focus:outline-none md:hidden">

@@ -10,6 +10,8 @@ h2{
     font-family: UniversBold;
 }
 p{
+    font-weight: 500;
+    font-size: 20px;
     font-family: Univers;
     line-height: 1.5;
 }

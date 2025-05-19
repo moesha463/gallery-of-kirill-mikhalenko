@@ -1,22 +1,32 @@
 {
     "biography": {
         "title": "Biography",
-    "paragraph1": "Kirill Mikhalenko, born on September 7, 1998, in Rechitsa, Gomel Region, Belarus, hails from a family of oil industry workers. The Gomel Region is renowned for its oil deposits and extraction. Kirill uses exclusively natural materials, with paintings created using oil not only serving as artistic works but also as powerful symbols of contemporary reality. By employing this medium, Kirill aims to reveal the multifaceted aspects of our lives and society.",
-    "paragraph2": "Oil represents the abundance of resources that has led to economic prosperity and technological progress on one hand, but ecological disasters and social conflicts on the other. This choice of material is an attempt to visualize this paradox. Each painting serves as a reminder of how we often ignore the consequences of our actions. Using oil as a painting medium illustrates the interaction between humanity and nature. Oil, the result of millions of years of natural transformation, makes these paintings a metaphor for destruction and restoration.",
-    "paragraph3": "Kirill hopes viewers will see not only beauty in these works but also the necessity to reflect on and reconsider our relationship with the planet’s resources. Oil evokes strong emotions—desire, fear, or anxiety. These artworks convey this emotional tension, creating a visual dialogue about what it means to be part of a world filled with contradictions. The goal is to provoke reflection on how each of us contributes to the existing system and its impact on the world around us. Thus, each oil painting becomes a multilayered work, laden with meaning and calling for contemplation.",
-    "eventsTitle": "Key events",    
-    "events": [
+        "artistName": "Kiryl Ruslanovich Mikhalenka",
+        "artistTitle": "Artist",
+        "photoAlt": "Portrait of the artist",
+        "boldParagraph1": "Born in the south of Belarus, Gomel Region, Rechitsa, on September 7, 1998, in a family of oil workers. The Gomel Region is known for its oil deposits and extraction.",
+        "regularParagraph1": "Uses exclusively natural materials. Paintings created with oil are not just works of art but also powerful symbols of modern reality. By using this material, he seeks to reveal the multifaceted aspects of our lives and society.",
+        "regularParagraph2": "Oil symbolizes resource abundance, which, on one hand, has led to economic prosperity and technological progress, but on the other—ecological disasters and social conflicts.",
+        "regularParagraph3": "The choice of this material is an attempt to visualize this paradox. Each painting serves as a reminder of how often we ignore the consequences of our actions.",
+        "boldParagraph2": "Oil is the result of millions of years of natural transformation, making these paintings a metaphor for decay and renewal.",
+        "regularParagraph4": "Using oil as a painting medium is an attempt to illustrate the interaction between humans and nature.",
+        "regularParagraph5": "I hope viewers see not only beauty in them but also the necessity of reflecting and reconsidering our relationship with the planet’s resources.",
+        "regularParagraph6": "Oil evokes strong emotions in people—desire, fear, or anxiety. My works convey this emotional tension, creating a visual dialogue about what it means to be part of a world full of contradictions.",
+        "regularParagraph7": "The goal is to provoke reflection on how each of us contributes to the existing system and how it impacts the world around us.",
+        "regularParagraph8": "Thus, each painting created with oil becomes a multilayered work, burdened with meaning and calling for contemplation.",
+        "eventsTitle": "Exhibitions",
+        "events": [
             {
                 "year": 2024,
-                "event": "Festival of Contemporary Art, Zaraysk, Moscow region. Curated by Askeri Gallery and Artonline24."
+                "event": "Festival of Contemporary Art, Zaraysk, Moscow Region. Curated by Askeri Gallery and Artonline24."
             },
             {
                 "year": 2023,
-                "event": "Exhibition at NFT Factory, Paris. Digital art display."
+                "event": "Exhibition at NFT Factory, Paris. Digital art."
             },
             {
                 "year": 2023,
-                "event": "Watch collection for Luch, Minsk."
+                "event": "Luch watch collection, Minsk."
             },
             {
                 "year": 2023,
@@ -24,7 +34,7 @@
             },
             {
                 "year": 2022,
-                "event": "Lexus NX launch, custom clothing design."
+                "event": "Lexus NX presentation, custom clothing."
             },
             {
                 "year": 2021,
@@ -44,25 +54,25 @@
             },
             {
                 "year": 2012,
-                "event": "Participation in Unicef 'Different Views' contest."
+                "event": "Participation in the Unicef 'Different Views' contest."
             }
         ]
     },
     "documents": {
         "title": "Achievements",
         "award": {
-            "title": "Award for participation in the Unicef drawing competition",
+            "title": "Award for participation in the international Unicef drawing competition",
             "description": "Membership in the Russian Union of Artists.",
             "imageAlt": "Certificate of the Russian Union of Artists"
         },
         "thanks": {
-            "title": "Acknowledgment for charity auction support",
+            "title": "Acknowledgment for assisting in the organization of a charity auction",
             "description": "Official acknowledgment document.",
             "imageAlt": "Acknowledgment for participation in the auction"
         },
         "membership": {
-            "title": "Fine Arts Education Diploma",
-            "description": "Diploma of Gomel Art College.",
+            "title": "Valid document confirming membership in the Russian Union of Artists",
+            "description": "Diploma from the Gomel Art College.",
             "imageAlt": "Diploma in Fine Arts Education"
         }
     }
