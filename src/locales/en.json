@@ -14,8 +14,20 @@
         "regularParagraph6": "Oil evokes strong emotions in people—desire, fear, or anxiety. My works convey this emotional tension, creating a visual dialogue about what it means to be part of a world full of contradictions.",
         "regularParagraph7": "The goal is to provoke reflection on how each of us contributes to the existing system and how it impacts the world around us.",
         "regularParagraph8": "Thus, each painting created with oil becomes a multilayered work, burdened with meaning and calling for contemplation.",
-        "eventsTitle": "Exhibitions",
+        "eventsTitle": "Exhibitions and Projects",
         "events": [
+            {
+                "year": "Since 2025",
+                "event": "Member of the Belarusian Union of Designers"
+            },
+            {
+                "year": "2018-2021",
+                "event": "Member of the Russian Union of Artists"
+            },
+            {
+                "year": "Education",
+                "event": "Rechitsa State School of Arts (2008-2014), Painting Department. Gomel State Art College, Painting Department (2015-2018)."
+            },
             {
                 "year": 2024,
                 "event": "Festival of Contemporary Art, Zaraysk, Moscow Region. Curated by Askeri Gallery and Artonline24."
@@ -59,7 +71,7 @@
         ]
     },
     "documents": {
-        "title": "Achievements",
+        "title": "Documents",
         "award": {
             "title": "Award for participation in the international Unicef drawing competition",
             "description": "Membership in the Russian Union of Artists.",

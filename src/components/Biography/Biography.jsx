@@ -44,6 +44,33 @@ const Biography = () => {
     }
   };
 
+  const events = Object.entries(
+    t("biography.events", { returnObjects: true }).reduce((acc, event) => {
+      if (!acc[event.year]) {
+        acc[event.year] = [];
+      }
+      acc[event.year].push(event.event);
+      return acc;
+    }, {})
+  ).sort(([yearA], [yearB]) => {
+    const priority = {
+      "С 2025": 1,
+      "2018-2021": 2,
+      "Образование": 3,
+      "Since 2025": 1,
+      "Education": 3,
+    };
+
+    const priorityA = priority[yearA] || 4;
+    const priorityB = priority[yearB] || 4;
+
+    if (priorityA !== 4 || priorityB !== 4) {
+      return priorityA - priorityB;
+    }
+
+    return parseInt(yearB) - parseInt(yearA);
+  });
+
   return (
     <div className="container mx-auto px-6 py-12">
       <div className="flex justify-center mb-12">
@@ -67,10 +94,10 @@ const Biography = () => {
             <div>
               <h2 className="text-5xl font-semibold w-full">{t("biography.artistName")}</h2>
               <div className="w-24 h-0.5 bg-black my-4"></div>
-              <p className="text-3xl italic font-bold w-full">{t("biography.artistTitle")}</p>
+              <p className="text-3xl font-bold w-full">{t("biography.artistTitle")}</p>
             </div>
             <div>
-              <p className="text-2xl font-bold mt-4 mb-4 w-full text-justify">{t("biography.boldParagraph1")}</p>         
+              <p className="text-2xl font-bold mt-4 mb-4 w-full text-justify">{t("biography.boldParagraph1")}</p>
               <p className="text-2xl mb-4 w-full text-justify">{t("biography.regularParagraph1")}</p>
             </div>
           </div>
@@ -91,11 +118,37 @@ const Biography = () => {
           {t("biography.eventsTitle", { defaultValue: "Key Events" })}
         </h2>
         <div className="relative">
-          {t("biography.events", { returnObjects: true }).map((event, index) => (
-            <div key={index} className="mb-6 flex flex-col items-center relative">
-              <div className="w-full bg-gray-100 p-4 rounded-lg shadow-none hover:bg-gray-200 transition cursor-pointer">
-                <h3 className="text-lg font-medium text-gray-800">{event.year}</h3>
-                <p className="text-lg text-gray-600 mt-2">{event.event}</p>
+          {events.length > 1 && (
+            <div
+              style={{
+                left: '8.4rem',
+                top: '50%',
+                height: `calc(100% - 3rem)`,
+                transform: 'translateY(-50%)',
+              }}
+              className="absolute w-1 bg-gray-300"
+            ></div>
+          )}
+          
+          {events.map(([year, events], index) => (
+            <div key={year} className="mb-8 flex items-center relative">
+              <div className="pr-4 w-32 text-right overflow-hidden text-ellipsis whitespace-nowrap">
+                <h3 className="text-lg font-medium text-gray-800">{year}</h3>
+              </div>
+              
+              <div
+                style={{ left: '8rem', top: '50%', transform: 'translateY(-50%)' }}
+                className="absolute w-4 h-4 bg-gray-600 rounded-full z-10"
+              ></div>
+              
+              <div className="pl-20 flex-1">
+                <div className="bg-gray-100 p-4 rounded-lg shadow-none hover:bg-gray-200 transition">
+                  {events.map((event, eventIndex) => (
+                    <p key={eventIndex} className="text-lg text-gray-600 mb-2 last:mb-0">
+                      {event}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
@@ -109,6 +162,7 @@ const Biography = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {documents.map((doc) => (
             <div
+              key={doc.id}
               className="bg-gray-100 p-4 shadow-none cursor-pointer rounded-lg hover:bg-gray-200 transition"
               onClick={() => openFullscreen(doc)}
             >
