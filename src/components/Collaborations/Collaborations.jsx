@@ -8,12 +8,43 @@ const COLLABORATION_DATA = {
   sections: [
     {
       id: 1,
-      name: "NFT Factory",
+      name: "collaboration.paragraph1",
       photos: [
         { id: 101, original: "/assets/images/col1.jpg", thumbnail: "/assets/images/col1.jpg" },
         { id: 102, original: "/assets/images/col2.jpg", thumbnail: "/assets/images/col2.jpg" },
         { id: 103, original: "/assets/images/col3.jpg", thumbnail: "/assets/images/col3.jpg" },
         { id: 104, original: "/assets/images/col4.jpg", thumbnail: "/assets/images/col4.jpg" },
+      ],
+    },
+    {
+      id: 2,
+      name: "collaboration.paragraph2",
+      photos: [
+        { id: 101, original: "/assets/images/col9.JPG", thumbnail: "/assets/images/col9.JPG" },
+        { id: 102, original: "/assets/images/col10.JPG", thumbnail: "/assets/images/col10.JPG" },
+        { id: 103, original: "/assets/images/col11.JPG", thumbnail: "/assets/images/col11.JPG" },
+        { id: 104, original: "/assets/images/col12.JPG", thumbnail: "/assets/images/col12.JPG" },
+        { id: 105, original: "/assets/images/col13.JPG", thumbnail: "/assets/images/col13.JPG" },
+        { id: 106, original: "/assets/images/col14.JPG", thumbnail: "/assets/images/col14.JPG" },
+      ],
+    },
+    {
+      id: 3,
+      name: "collaboration.paragraph3",
+      photos: [
+        { id: 101, original: "/assets/images/col5.jpg", thumbnail: "/assets/images/col5.jpg" },
+        { id: 102, original: "/assets/images/col6.PNG", thumbnail: "/assets/images/col6.PNG" },
+        { id: 103, original: "/assets/images/col7.PNG", thumbnail: "/assets/images/col7.PNG" },
+        { id: 104, original: "/assets/images/col8.PNG", thumbnail: "/assets/images/col8.PNG" },
+      ],
+    },
+    {
+      id: 4,
+      name: "collaboration.paragraph4",
+      photos: [
+        { id: 101, original: "/assets/images/col15.jpg", thumbnail: "/assets/images/col15.jpg" },
+        { id: 102, original: "/assets/images/col16.jpg", thumbnail: "/assets/images/col16.jpg" },
+        { id: 103, original: "/assets/images/col17.jpg", thumbnail: "/assets/images/col17.jpg" },
       ],
     },
   ],
@@ -48,9 +79,15 @@ const Collaborations = () => {
       </div>
 
       {COLLABORATION_DATA.sections.map((section) => (
-        <div key={section.id} className="mb-12">
-          <h3 className="text-2xl font-medium text-center mb-6">{t('collaboration.paragraph')}</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div key={section.id} className="mb-24">
+          <h3 className="text-2xl font-medium text-center mb-6">{t(section.name)}</h3>
+          <div
+            className={`grid gap-6 ${section.photos.length === 3 ? "grid-cols-3" :
+                section.photos.length === 4 ? "grid-cols-4" :
+                  section.photos.length === 6 ? "grid-cols-3" :
+                    "grid-cols-2"
+              }`}
+          >
             {section.photos.map((photo, index) => (
               <div
                 key={photo.id}
@@ -67,6 +104,8 @@ const Collaborations = () => {
           </div>
         </div>
       ))}
+
+
 
       {galleryOpen && (
         <div
