@@ -73,13 +73,19 @@ const Biography = () => {
 
   return (
     <div className="container mx-auto px-6 py-12">
-      <div className="flex justify-center mb-12">
-        <div className="bg-white border-6 border-black flex items-center justify-center">
+      <div className="flex flex-col items-center mb-12">
+        <img
+          src="/assets/images/icon.PNG"
+          alt="Logo"
+          className="w-36 mb-4"
+        />
+        <div className="bg-white border-6 border-black flex items-center justify-center max-w-md">
           <h1 className="text-3xl font-regular uppercase text-center px-4 py-2">
             {t("biography.title")}
           </h1>
         </div>
       </div>
+
 
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row gap-8 items-stretch">
@@ -131,18 +137,18 @@ const Biography = () => {
               className="absolute w-1 bg-gray-300"
             ></div>
           )}
-          
+
           {events.map(([year, events], index) => (
             <div key={year} className="mb-8 flex items-center relative">
               <div className="pr-4 w-32 text-right overflow-hidden text-ellipsis whitespace-nowrap">
                 <h3 className="text-lg font-medium text-gray-800">{year}</h3>
               </div>
-              
+
               <div
                 style={{ left: '8rem', top: '50%', transform: 'translateY(-50%)' }}
                 className="absolute w-4 h-4 bg-gray-600 rounded-full z-10"
               ></div>
-              
+
               <div className="pl-20 flex-1">
                 <div className="bg-gray-100 p-4 rounded-lg shadow-none hover:bg-gray-200 transition">
                   {events.map((event, eventIndex) => (

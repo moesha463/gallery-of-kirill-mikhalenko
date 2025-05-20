@@ -39,8 +39,13 @@ const Exhibitions = () => {
 
   return (
     <div className="container mx-auto px-6 py-12">
-      <div className="flex justify-center mb-12">
-        <div className="bg-white border-6 border-black flex items-center justify-center">
+      <div className="flex flex-col items-center mb-12">
+        <img
+          src="/assets/images/icon.PNG"
+          alt="Logo"
+          className="w-36 mb-4"
+        />
+        <div className="bg-white border-6 border-black flex items-center justify-center max-w-md">
           <h1 className="text-3xl font-regular uppercase text-center px-4 py-2">
             {t("header.exhibitions")}
           </h1>
