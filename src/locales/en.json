@@ -109,5 +109,11 @@
             "description": "Diploma from the Gomel Art College.",
             "imageAlt": "Diploma in Fine Arts Education"
         }
+    },
+    "exhibition": {
+        "paragraph": "Exhibition in Paris - Gallery opposite the Center Georges Pompidou NFT Factory 2023. Exhibited his one digital art NFT on platforme SuperRare, created in the first months of his stay in Paris. Gallery NFT Factory"
+    },
+    "collaboration": {
+        "paragraph": "Collaboration Kirill Mikhalenko with INGLOT. A limited version of the System Art Edition Universal Eyeshadow Palette. INGLOT The Crimson Sunset painting Kirill Mikhalenko created on the palette lid is a kaleidoscope of colors that will make you smile, rejoice and wonder in a way that only children can."
     }
 }

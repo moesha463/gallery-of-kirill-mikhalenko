@@ -1,0 +1,10 @@
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: 100vh;
+}
+.image-gallery-content{
+    width: 100%;
+}
+.image-gallery{
+    display: flex;
+    align-items: center;
+}

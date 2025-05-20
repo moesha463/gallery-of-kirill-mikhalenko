@@ -2,24 +2,24 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import './Exhibitions.css'
+import './Collaborations.css'
 
-const EXHIBITION_DATA = {
+const COLLABORATION_DATA = {
   sections: [
     {
       id: 1,
       name: "NFT Factory",
       photos: [
-        { id: 101, original: "/assets/images/ex1.JPG", thumbnail: "/assets/images/ex1.JPG" },
-        { id: 102, original: "/assets/images/ex2.JPG", thumbnail: "/assets/images/ex2.JPG" },
-        { id: 103, original: "/assets/images/ex3.JPG", thumbnail: "/assets/images/ex3.JPG" },
-        { id: 104, original: "/assets/images/ex4.JPG", thumbnail: "/assets/images/ex4.JPG" },
+        { id: 101, original: "/assets/images/col1.jpg", thumbnail: "/assets/images/col1.jpg" },
+        { id: 102, original: "/assets/images/col2.jpg", thumbnail: "/assets/images/col2.jpg" },
+        { id: 103, original: "/assets/images/col3.jpg", thumbnail: "/assets/images/col3.jpg" },
+        { id: 104, original: "/assets/images/col4.jpg", thumbnail: "/assets/images/col4.jpg" },
       ],
     },
   ],
 };
 
-const Exhibitions = () => {
+const Collaborations = () => {
   const { t } = useTranslation();
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [galleryImages, setGalleryImages] = useState([]);
@@ -42,14 +42,14 @@ const Exhibitions = () => {
       <div className="flex justify-center mb-12">
         <div className="bg-white border-6 border-black flex items-center justify-center">
           <h1 className="text-3xl font-regular uppercase text-center px-4 py-2">
-            {t("header.exhibitions")}
+            {t("header.collaboration")}
           </h1>
         </div>
       </div>
 
-      {EXHIBITION_DATA.sections.map((section) => (
+      {COLLABORATION_DATA.sections.map((section) => (
         <div key={section.id} className="mb-12">
-          <h3 className="text-2xl font-medium text-center mb-6">{t('exhibition.paragraph')}</h3>
+          <h3 className="text-2xl font-medium text-center mb-6">{t('collaboration.paragraph')}</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {section.photos.map((photo, index) => (
               <div
@@ -59,7 +59,7 @@ const Exhibitions = () => {
               >
                 <img
                   src={photo.thumbnail}
-                  alt="Exhibition Image"
+                  alt="Collaboration Image"
                   className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                 />
               </div>
@@ -96,4 +96,4 @@ const Exhibitions = () => {
   );
 };
 
-export default Exhibitions;
+export default Collaborations;
