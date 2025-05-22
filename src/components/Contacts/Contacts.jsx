@@ -13,17 +13,17 @@ const Contacts = () => {
 
   const validateForm = () => {
     let newErrors = {};
-    
+
     if (!formData.sender_name.trim()) {
       newErrors.sender_name = "Введите имя";
     }
-    
+
     if (!formData.sender_email.trim()) {
       newErrors.sender_email = "Введите email";
     } else if (!/\S+@\S+\.\S+/.test(formData.sender_email)) {
       newErrors.sender_email = "Некорректный email";
     }
-    
+
     if (!formData.message.trim()) {
       newErrors.message = "Введите сообщение";
     }
@@ -40,7 +40,7 @@ const Contacts = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
 
     try {
@@ -62,6 +62,18 @@ const Contacts = () => {
 
   return (
     <div className="container mx-auto px-6 py-12 bg-white text-black">
+      <div className="flex flex-col items-center mb-12">
+        <img
+          src="/assets/images/icon.PNG"
+          alt="Logo"
+          className="w-36 mb-4"
+        />
+        <div className="bg-white border-6 border-black flex items-center justify-center max-w-md w-full">
+          <h1 className="text-3xl font-regular uppercase text-center px-4 py-2 w-full">
+            {t("header.contacts")}
+          </h1>
+        </div>
+      </div>
       <div className="max-w-lg mx-auto bg-white p-6">
         <h2 className="text-2xl font-semibold text-center mb-4">{t("contact.form.title")}</h2>
 
