@@ -4,41 +4,59 @@ import { useTranslation } from "react-i18next";
 const ArtworkCard = ({ artwork }) => {
   const { i18n } = useTranslation();
 
-  const isLoading = !artwork || !artwork.title_ru || !artwork.title_en || !artwork.image_url;
+  // Check if artwork data is incomplete
+  const isLoading = !artwork || !artwork.title_en || !artwork.title_ru || !artwork.image_url;
 
-  // Select title and description based on current language
+  // Select title based on current language
   const title = i18n.language === "en" ? artwork.title_en : artwork.title_ru;
-  const description = i18n.language === "en" ? artwork.description_en : artwork.description_ru;
+
+  if (isLoading) {
+    return (
+      <div className="overflow-hidden bg-transparent">
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex-1 w-1/2">
+            <div className="w-full h-64 bg-gray-200 animate-shimmer rounded"></div>
+            <div className="text-center mt-2 space-y-2">
+              <div className="h-6 bg-gray-200 animate-shimmer rounded w-3/4 mx-auto"></div>
+              <div className="h-4 bg-gray-200 animate-shimmer rounded w-2/3 mx-auto"></div>
+            </div>
+          </div>
+          <div className="flex-1 w-1/2">
+            <div className="w-full h-64 bg-gray-200 animate-shimmer rounded"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="overflow-hidden bg-transparent">
-      <div className="w-full flex justify-start items-center">
-        {isLoading ? (
-          <div className="w-full max-h-100 bg-gray-200 animate-shimmer rounded"></div>
-        ) : (
+      <div className="flex flex-col md:flex-row gap-20">
+        <div className="flex-1 w-1/2 flex flex-col">
           <img
             src={artwork.image_url}
-            alt={i18n.language === "en" ? artwork.title_en : artwork.title_ru}
-            className="w-full max-h-100 object-contain"
+            alt={title}
+            className="w-full h-auto object-cover"
           />
-        )}
-      </div>
-      <div className="w-full flex items-end pb-4">
-        <div className="text-black text-left">
-          {isLoading ? (
-            <div className="space-y-2">
-              <div className="h-6 bg-gray-200 animate-shimmer rounded w-3/4"></div>
-              <div className="h-4 bg-gray-200 animate-shimmer rounded w-5/6"></div>
-              <div className="h-4 bg-gray-200 animate-shimmer rounded w-2/3"></div>
-              <div className="h-4 bg-gray-200 animate-shimmer rounded w-1/2"></div>
-            </div>
+          <div className="text-center mt-2">
+            <p className="font-bold text-2xl">{title}</p>
+            <p className="text-xl">{`${artwork.dimensions}`}</p>
+            <p className="text-xl">{`${artwork.medium}`}</p>
+            <p className="text-xl">{`${artwork.year}`}</p>
+          </div>
+        </div>
+        {/* Wall Image */}
+        <div className="flex-1 w-1/2">
+          {artwork.wall_image_url ? (
+            <img
+              src={artwork.wall_image_url}
+              alt={`${title} ${i18n.t('petroleumPaintings.image.onWall')}`}
+              className="w-full h-auto object-cover"
+            />
           ) : (
-            <>
-              <h2 className="text-lg font-semibold">{title}</h2>
-              <p className="text-sm mt-1">{description}</p>
-              <p className="text-sm mt-1">{artwork.mediums}</p>
-              <p className="text-sm mt-1">{artwork.dimensions}</p>
-            </>
+            <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+              <p className="text-gray-500">{i18n.t('petroleumPaintings.image.noWallImage')}</p>
+            </div>
           )}
         </div>
       </div>

@@ -125,5 +125,34 @@
     "publications": {
         "title1": "Schweizer Magazine auf russisch 2021",
         "title2": "Magazine ЭШ 2021"
+    },
+    "contact": {
+        "form":{
+            "title": "Title",
+            "name": "Name",
+            "email": "E-mail",
+            "message": "Message",
+            "submit": "Submit"
+        }
+    },
+    "petroleumPaintings": {
+        "header":{
+            "title": "",
+            "collectionName": ""
+        },
+        "text":{
+            "boldParagraph1": "",
+            "regularParagraph1": "",
+            "regularParagraph2": "",
+            "boldParagraph2": "",
+            "boldParagraph3": "",
+            "regularParagraph3": "",
+            "regularParagraph4": "",
+            "regularParagraph5": ""
+        },
+        "list":{
+            "item1": "",
+            "item2": ""
+        }
     }
 }
