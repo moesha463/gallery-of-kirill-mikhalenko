@@ -7,14 +7,114 @@ const apiUrl = "https://script.google.com/macros/s/AKfycbzSKjkpbkqSph1sEpZwR2Ezd
 
 const STATIC_ARTWORKS = [
     {
+        id: "1",
+        title_en: "Petroleum 1",
+        title_ru: "Petroleum 1",
+        image_url: "/assets/images/petroleum/pet1_1.PNG",
+        wall_image_url: "/assets/images/petroleum/pet1_2.JPG",
+        dimensions: "100x100x4",
+        medium: "Oil on canvas",
+        year: "2025",
+    },
+    {
+        id: "2",
+        title_en: "Petroleum 2",
+        title_ru: "Petroleum 2",
+        image_url: "/assets/images/petroleum/pet2_1.JPG",
+        wall_image_url: "/assets/images/petroleum/pet2_2.JPG",
+        dimensions: "100x100x4",
+        medium: "Oil on canvas",
+        year: "2025",
+    },
+    {
         id: "3",
         title_en: "Petroleum 3",
         title_ru: "Petroleum 3",
         image_url: "/assets/images/petroleum/pet3_1.JPG",
         wall_image_url: "/assets/images/petroleum/pet3_2.JPG",
-        dimensions: "100x70 cm",
+        dimensions: "100x100x4",
         medium: "Oil on canvas",
-        year: "2023",
+        year: "2025",
+    },
+    {
+        id: "4",
+        title_en: "Petroleum 4",
+        title_ru: "Petroleum 4",
+        image_url: "/assets/images/petroleum/pet4_1.PNG",
+        wall_image_url: "/assets/images/petroleum/pet4_2.JPG",
+        dimensions: "100x100x4",
+        medium: "Oil on canvas",
+        year: "2025",
+    },
+    {
+        id: "5",
+        title_en: "Petroleum 5",
+        title_ru: "Petroleum 5",
+        image_url: "/assets/images/petroleum/pet5_1.JPG",
+        wall_image_url: "/assets/images/petroleum/pet5_2.JPG",
+        dimensions: "100x100x4",
+        medium: "Oil on canvas",
+        year: "2025",
+    },
+    {
+        id: "6",
+        title_en: "Petroleum 6",
+        title_ru: "Petroleum 6",
+        image_url: "/assets/images/petroleum/pet6_1.PNG",
+        wall_image_url: "/assets/images/petroleum/pet6_2.JPG",
+        dimensions: "100x100x4",
+        medium: "Oil on canvas",
+        year: "2025",
+    },
+    {
+        id: "7",
+        title_en: "Petroleum 7",
+        title_ru: "Petroleum 7",
+        image_url: "/assets/images/petroleum/pet7_1.JPG",
+        wall_image_url: "/assets/images/petroleum/pet7_2.JPG",
+        dimensions: "100x100x4",
+        medium: "Oil on canvas",
+        year: "2025",
+    },
+    {
+        id: "8",
+        title_en: "Petroleum 8",
+        title_ru: "Petroleum 8",
+        image_url: "/assets/images/petroleum/pet8_1.JPG",
+        wall_image_url: "/assets/images/petroleum/pet8_2.JPG",
+        dimensions: "100x100x4",
+        medium: "Oil on canvas",
+        year: "2025",
+    },
+    {
+        id: "9",
+        title_en: "Petroleum 9",
+        title_ru: "Petroleum 9",
+        image_url: "/assets/images/petroleum/pet9_1.JPG",
+        wall_image_url: "/assets/images/petroleum/pet9_2.JPG",
+        dimensions: "100x100x4",
+        medium: "Oil on canvas",
+        year: "2025",
+    },
+    {
+        id: "10",
+        title_en: "Petroleum 10",
+        title_ru: "Petroleum 10",
+        image_url: "/assets/images/petroleum/pet10_1.JPG",
+        wall_image_url: "/assets/images/petroleum/pet10_2.JPG",
+        dimensions: "100x100x4",
+        medium: "Oil on canvas",
+        year: "2025",
+    },
+    {
+        id: "11",
+        title_en: "Petroleum 11",
+        title_ru: "Petroleum 11",
+        image_url: "/assets/images/petroleum/pet11_1.PNG",
+        wall_image_url: "/assets/images/petroleum/pet11_2.jpg",
+        dimensions: "100x100x4",
+        medium: "Oil on canvas",
+        year: "2025",
     },
     {
         id: "12",
@@ -22,9 +122,9 @@ const STATIC_ARTWORKS = [
         title_ru: "Petroleum 12",
         image_url: "/assets/images/petroleum/pet12_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet12_2.JPG",
-        dimensions: "100x70 cm",
+        dimensions: "100x100x4",
         medium: "Oil on canvas",
-        year: "2023",
+        year: "2025",
     },
     {
         id: "13",
@@ -32,9 +132,9 @@ const STATIC_ARTWORKS = [
         title_ru: "Petroleum 13",
         image_url: "/assets/images/petroleum/pet13_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet13_2.JPG",
-        dimensions: "100x70 cm",
+        dimensions: "100x100x4",
         medium: "Oil on canvas",
-        year: "2023",
+        year: "2025",
     },
     {
         id: "14",
@@ -42,9 +142,9 @@ const STATIC_ARTWORKS = [
         title_ru: "Petroleum 14",
         image_url: "/assets/images/petroleum/pet14_1.JPG",
         wall_image_url: "/assets/images/petroleum/pet14_2.JPG",
-        dimensions: "100x70 cm",
+        dimensions: "100x100x4",
         medium: "Oil on canvas",
-        year: "2023",
+        year: "2025",
     },
     {
         id: "15",
@@ -52,9 +152,9 @@ const STATIC_ARTWORKS = [
         title_ru: "Petroleum 15",
         image_url: "/assets/images/petroleum/pet15_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet15_2.JPG",
-        dimensions: "100x70 cm",
+        dimensions: "100x100x4",
         medium: "Oil on canvas",
-        year: "2023",
+        year: "2025",
     },
     {
         id: "16",
@@ -62,9 +162,9 @@ const STATIC_ARTWORKS = [
         title_ru: "Petroleum 16",
         image_url: "/assets/images/petroleum/pet16_1.JPG",
         wall_image_url: "/assets/images/petroleum/pet16_2.JPG",
-        dimensions: "100x70 cm",
+        dimensions: "100x100x4",
         medium: "Oil on canvas",
-        year: "2023",
+        year: "2025",
     },
     {
         id: "17",
@@ -72,9 +172,9 @@ const STATIC_ARTWORKS = [
         title_ru: "Petroleum 17",
         image_url: "/assets/images/petroleum/pet17_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet17_2.JPG",
-        dimensions: "100x70 cm",
+        dimensions: "100x100x4",
         medium: "Oil on canvas",
-        year: "2023",
+        year: "2025",
     },
     {
         id: "18",
@@ -82,9 +182,9 @@ const STATIC_ARTWORKS = [
         title_ru: "Petroleum 18",
         image_url: "/assets/images/petroleum/pet18_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet18_2.JPG",
-        dimensions: "100x70 cm",
+        dimensions: "100x100x4",
         medium: "Oil on canvas",
-        year: "2023",
+        year: "2025",
     },
     {
         id: "19",
@@ -92,9 +192,9 @@ const STATIC_ARTWORKS = [
         title_ru: "Petroleum 19",
         image_url: "/assets/images/petroleum/pet19_1.JPG",
         wall_image_url: "/assets/images/petroleum/pet19_2.JPG",
-        dimensions: "100x70 cm",
+        dimensions: "100x100x4",
         medium: "Oil on canvas",
-        year: "2023",
+        year: "2025",
     },
     {
         id: "20",
@@ -102,9 +202,9 @@ const STATIC_ARTWORKS = [
         title_ru: "Petroleum 20",
         image_url: "/assets/images/petroleum/pet20_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet20_2.JPG",
-        dimensions: "100x70 cm",
+        dimensions: "100x100x4",
         medium: "Oil on canvas",
-        year: "2023",
+        year: "2025",
     },
 ];
 
@@ -174,14 +274,14 @@ const Gallery = () => {
     }, [t]);
 
     return (
-        <div className="container mx-auto px-6 py-12">
+        <div className="mx-auto px-6 py-12">
             <div className="flex flex-col items-center mb-12">
                 <img
                     src="/assets/images/icon.PNG"
                     alt="Logo"
                     className="w-36 mb-4"
                 />
-                <div className="bg-white border-6 border-black flex items-center justify-center max-w-md w-full">
+                <div className="bg-white border-6 border-black flex items-center justify-center">
                     <h1 className="text-3xl font-regular uppercase text-center px-4 py-2 w-full">
                         {t("header.petroleumPaintings")}
                     </h1>
@@ -192,10 +292,6 @@ const Gallery = () => {
                 <h1 className="text-3xl font-regular uppercase w-full">
                     {t('petroleumPaintings.header.title')}
                 </h1>
-                <div className="w-16 h-1 bg-black mt-2"></div>
-                <h2 className="text-3xl font-regular mt-4 w-full">
-                    {t('petroleumPaintings.header.collectionName')}
-                </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-8 w-full">
@@ -247,7 +343,7 @@ const Gallery = () => {
                 ) : error ? (
                     <p className="text-red-500 text-center">{error}</p>
                 ) : (
-                    <div className="grid grid-cols-1 gap-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                         {artworks.map((artwork) => (
                             <div key={artwork.id} className="w-full">
                                 <ArtworkCard artwork={artwork} />

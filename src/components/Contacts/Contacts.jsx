@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 
+import "./Contacts.css";
+
 const Contacts = () => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
@@ -68,12 +70,85 @@ const Contacts = () => {
           alt="Logo"
           className="w-36 mb-4"
         />
-        <div className="bg-white border-6 border-black flex items-center justify-center max-w-md w-full">
+        <div className="bg-white border-6 border-black flex items-center justify-center">
           <h1 className="text-3xl font-regular uppercase text-center px-4 py-2 w-full">
             {t("header.contacts")}
           </h1>
         </div>
       </div>
+
+      {/* <div className="max-w-lg mx-auto bg-white p-6 mb-6 text-center">
+        <h2 className="text-4xl font-bold uppercase mb-4">Контакты для связи:</h2>
+        <hr className="border-t-2 border-black w-1/4 mx-auto mb-6" />
+        <div className="relative">
+          <table className="w-full text-lg">
+            <tbody>
+              <tr>
+                <td className="pr-4 text-right w-1/4">Почта</td>
+                <td className="w-4">
+                  <span className="contact-dot"></span>
+                </td>
+                <td className="pl-4">
+                  <a
+                    href="mailto:mioikirillartist@gmail.com"
+                    className="text-black hover:text-gray-600"
+                  >
+                    mioikirillartist@gmail.com
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td className="pr-4 text-right w-1/4">WhatsApp</td>
+                <td className="w-4">
+                  <span className="contact-dot"></span>
+                </td>
+                <td className="pl-4">
+                  <a
+                    href="https://wa.me/375445986591"
+                    className="text-black hover:text-gray-600"
+                  >
+                    +375445986591
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td className="pr-4 text-right w-1/4">Instagram</td>
+                <td className="w-4">
+                  <span className="contact-dot"></span>
+                </td>
+                <td className="pl-4">
+                  <a
+                    href="https://instagram.com/mikhalenkakiryll"
+                    className="text-black hover:text-gray-600"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @mikhalenkakiryll
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td className="pr-4 text-right w-1/4">Сайт</td>
+                <td className="w-4">
+                  <span className="contact-dot"></span>
+                </td>
+                <td className="pl-4">
+                  <a
+                    href="https://kirylmikhalenka.com"
+                    className="text-black hover:text-gray-600"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    kirylmikhalenka.com
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div className="vertical-line"></div>
+        </div>
+      </div> */}
+
       <div className="max-w-lg mx-auto bg-white p-6">
         <h2 className="text-2xl font-semibold text-center mb-4">{t("contact.form.title")}</h2>
 

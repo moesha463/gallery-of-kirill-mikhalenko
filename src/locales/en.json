@@ -27,69 +27,69 @@
         "eventsTitle": "Exhibitions and Projects",
         "events": [
             {
-"year": "Since 2025",
-"event": "Member of the Belarusian Union of Designers"
-},
-{
-"year": "2018-2021",
-"event": "Member of the Russian Union of Artists"
-},
-{
-"year": 2024,
-"event": "Contemporary art festival in Zaraysk, Moscow region. Exhibited 12 works curated by Askeri Gallery and Artonline24."
-},
-{
-"year": 2023,
-"event": "Exhibition in Paris - Gallery opposite the Georges Pompidou Center NFT Factory. Exhibited his digital art NFT, created in the first months of his stay in Paris. Gallery NFT Factory, Paris, France."
-},
-{
-"year": 2023,
-"event": "Luch Watch Factory, a watch collection created based on sketches by Kirill Mikhalenko. The dials depict paintings, three bright drawings, Minsk."
-},
-{
-"year": 2023,
-"event": "Collaboration with the skateboard brand 375. The boards feature a picture called 'Animal Planet'."
-},
-{
-"year": 2022,
-"event": "Lexus – presentation of the new NX car, made customized clothing for Lexus by individual order and held an exhibition in Minsk."
-},
-{
-"year": 2021,
-"event": "Collaboration with the global cosmetics brand INGLOT, a limited collection of universal palettes Freedom System Art Edition 2021. With an image of the artist's painting."
-},
-{
-"year": 2021,
-"event": "Show of the collection 'Naivety' of 26 clothing looks. Falcon Club Arena, ANNModels."
-},
-{
-"year": 2021,
-"event": "Joint show with E. Volkova of a collection of 10 looks 'Naivety' Brand fashion show, Beijing Hotel, Minsk. Brand Fashion Show."
-},
-{
-"year": 2019,
-"event": "Charity exhibition in the Art House gallery 'Love Works', Minsk."
-},
-{
-"year": 2018,
-"event": "Exhibition 'Promotion', Gomel, Vashchenko Gallery."
-},
-{
-"year": 2017,
-"event": "Exhibition together with the 'Belarusian Union of Artists'. Gomel, DK Zheleznodorozhnikov."
-},
-{
-"year": 2017,
-"event": "Joint exhibition in the Center for Contemporary Art, Vitebsk, 'Music for the Eyes'."
-},
-{
-"year": 2017,
-"event": "Joint exhibition 'Symbiosis'. Belarus, Gomel. Palace of Culture."
-},
-{
-"year": 2012,
-"event": "Participation in the international competition, together with the Polish Committee of the Peoples of UNICEF 'Other Views'."
-}
+                "year": "Since 2025",
+                "event": "Member of the Belarusian Union of Designers"
+            },
+            {
+                "year": "2018-2021",
+                "event": "Member of the Russian Union of Artists"
+            },
+            {
+                "year": 2024,
+                "event": "Contemporary art festival in Zaraysk, Moscow region. Exhibited 12 works curated by Askeri Gallery and Artonline24."
+            },
+            {
+                "year": 2023,
+                "event": "Exhibition in Paris - Gallery opposite the Georges Pompidou Center NFT Factory. Exhibited his digital art NFT, created in the first months of his stay in Paris. Gallery NFT Factory, Paris, France."
+            },
+            {
+                "year": 2023,
+                "event": "Luch Watch Factory, a watch collection created based on sketches by Kirill Mikhalenko. The dials depict paintings, three bright drawings, Minsk."
+            },
+            {
+                "year": 2023,
+                "event": "Collaboration with the skateboard brand 375. The boards feature a picture called 'Animal Planet'."
+            },
+            {
+                "year": 2022,
+                "event": "Lexus – presentation of the new NX car, made customized clothing for Lexus by individual order and held an exhibition in Minsk."
+            },
+            {
+                "year": 2021,
+                "event": "Collaboration with the global cosmetics brand INGLOT, a limited collection of universal palettes Freedom System Art Edition 2021. With an image of the artist's painting."
+            },
+            {
+                "year": 2021,
+                "event": "Show of the collection 'Naivety' of 26 clothing looks. Falcon Club Arena, ANNModels."
+            },
+            {
+                "year": 2021,
+                "event": "Joint show with E. Volkova of a collection of 10 looks 'Naivety' Brand fashion show, Beijing Hotel, Minsk. Brand Fashion Show."
+            },
+            {
+                "year": 2019,
+                "event": "Charity exhibition in the Art House gallery 'Love Works', Minsk."
+            },
+            {
+                "year": 2018,
+                "event": "Exhibition 'Promotion', Gomel, Vashchenko Gallery."
+            },
+            {
+                "year": 2017,
+                "event": "Exhibition together with the 'Belarusian Union of Artists'. Gomel, DK Zheleznodorozhnikov."
+            },
+            {
+                "year": 2017,
+                "event": "Joint exhibition in the Center for Contemporary Art, Vitebsk, 'Music for the Eyes'."
+            },
+            {
+                "year": 2017,
+                "event": "Joint exhibition 'Symbiosis'. Belarus, Gomel. Palace of Culture."
+            },
+            {
+                "year": 2012,
+                "event": "Participation in the international competition, together with the Polish Committee of the Peoples of UNICEF 'Other Views'."
+            }
         ]
     },
     "documents": {
@@ -127,7 +127,7 @@
         "title2": "Magazine ЭШ 2021"
     },
     "contact": {
-        "form":{
+        "form": {
             "title": "Title",
             "name": "Name",
             "email": "E-mail",
@@ -135,24 +135,24 @@
             "submit": "Submit"
         }
     },
-"petroleumPaintings": {
-"header":{
-"title": "A collection of 20 paintings",
-"collectionName": "«Petroleum»"
-},
-"text":{
-"boldParagraph1": "The series of paintings is a profound study of oil as a symbol of modernity, wealth and destruction.",
-"regularParagraph1": "Each work in this collection is created using real oil, which gives it a unique structure and visual depth, demonstrating the uniqueness of the artistic technique. It serves as an important means of discussing topical social and environmental issues.",
-"regularParagraph2": "They can evoke strong emotions in viewers and encourage reflection on the role of oil in our lives and its impact on the planet. And will make us all understand what really affects our lives, black gold or ourselves.",
-"boldParagraph2": "Oil is the blood of modern civilization not only illustrates the importance of oil in our lives, but also poses a number of questions to the viewer:",
-"boldParagraph3": "The idea that change begins with ourselves inspires action and encourages reflection on how we can become the best version of ourselves. Every small step matters - whether it's taking care of ourselves, protecting the environment, or supporting others.",
-"regularParagraph3": "Ultimately, it is these changes that create a domino effect, contributing to broader transformations in society.",
-"regularParagraph4": "Thus, the influence of oil in the paintings becomes a multifaceted reflection of our times - it is a story of progress, challenges, and hope for a better future. Each work encourages the viewer to think about their role in this process and what steps we can take to create a more sustainable world.",
-"regularParagraph5": "Thus, 'If you want to change the world, start with yourself' becomes not just a slogan, but a life philosophy that can lead to significant changes on a personal level, and on a global scale."
-},
-"list":{
-"item1": "How can we balance resource consumption with care for the planet?",
-"item2": "What steps should we take to transition to more sustainable energy sources?"
-}
-}
+    "petroleumPaintings": {
+        "header": {
+            "title": "Petroleum",
+            "collectionName": "«Petroleum»"
+        },
+        "text": {
+            "boldParagraph1": "The series of paintings is a profound study of oil as a symbol of modernity, wealth and destruction.",
+            "regularParagraph1": "Each work in this collection is created using real oil, which gives it a unique structure and visual depth, demonstrating the uniqueness of the artistic technique. It serves as an important means of discussing topical social and environmental issues.",
+            "regularParagraph2": "They can evoke strong emotions in viewers and encourage reflection on the role of oil in our lives and its impact on the planet. And will make us all understand what really affects our lives, black gold or ourselves.",
+            "boldParagraph2": "Oil is the blood of modern civilization not only illustrates the importance of oil in our lives, but also poses a number of questions to the viewer:",
+            "boldParagraph3": "The idea that change begins with ourselves inspires action and encourages reflection on how we can become the best version of ourselves. Every small step matters - whether it's taking care of ourselves, protecting the environment, or supporting others.",
+            "regularParagraph3": "Ultimately, it is these changes that create a domino effect, contributing to broader transformations in society.",
+            "regularParagraph4": "Thus, the influence of oil in the paintings becomes a multifaceted reflection of our times - it is a story of progress, challenges, and hope for a better future. Each work encourages the viewer to think about their role in this process and what steps we can take to create a more sustainable world.",
+            "regularParagraph5": "Thus, 'If you want to change the world, start with yourself' becomes not just a slogan, but a life philosophy that can lead to significant changes on a personal level, and on a global scale."
+        },
+        "list": {
+            "item1": "How can we balance resource consumption with care for the planet?",
+            "item2": "What steps should we take to transition to more sustainable energy sources?"
+        }
+    }
 }

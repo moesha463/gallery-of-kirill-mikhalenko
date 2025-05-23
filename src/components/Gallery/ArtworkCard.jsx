@@ -31,7 +31,7 @@ const ArtworkCard = ({ artwork }) => {
 
   return (
     <div className="overflow-hidden bg-transparent">
-      <div className="flex flex-col md:flex-row gap-20">
+      <div className="flex flex-row gap-20">
         <div className="flex-1 w-1/2 flex flex-col">
           <img
             src={artwork.image_url}
@@ -45,7 +45,6 @@ const ArtworkCard = ({ artwork }) => {
             <p className="text-xl">{`${artwork.year}`}</p>
           </div>
         </div>
-        {/* Wall Image */}
         <div className="flex-1 w-1/2">
           {artwork.wall_image_url ? (
             <img
