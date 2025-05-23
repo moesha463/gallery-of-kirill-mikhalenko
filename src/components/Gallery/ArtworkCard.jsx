@@ -7,8 +7,10 @@ const ArtworkCard = ({ artwork }) => {
   // Check if artwork data is incomplete
   const isLoading = !artwork || !artwork.title_en || !artwork.title_ru || !artwork.image_url;
 
+
   // Select title based on current language
   const title = i18n.language === "en" ? artwork.title_en : artwork.title_ru;
+  const medium = i18n.language === 'en' ? artwork.medium_en : artwork.medium_ru;
 
   if (isLoading) {
     return (
@@ -41,7 +43,7 @@ const ArtworkCard = ({ artwork }) => {
           <div className="text-center mt-2">
             <p className="font-bold text-2xl">{title}</p>
             <p className="text-xl">{`${artwork.dimensions}`}</p>
-            <p className="text-xl">{`${artwork.medium}`}</p>
+            <p className="text-xl">{`${medium}`}</p>
             <p className="text-xl">{`${artwork.year}`}</p>
           </div>
         </div>

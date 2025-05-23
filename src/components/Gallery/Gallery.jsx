@@ -13,7 +13,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet1_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet1_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -23,7 +24,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet2_1.JPG",
         wall_image_url: "/assets/images/petroleum/pet2_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -33,7 +35,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet3_1.JPG",
         wall_image_url: "/assets/images/petroleum/pet3_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -43,17 +46,19 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet4_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet4_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
         id: "5",
         title_en: "Petroleum 5",
         title_ru: "Petroleum 5",
-        image_url: "/assets/images/petroleum/pet5_1.JPG",
+        image_url: "/assets/images/petroleum/pet5_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet5_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -63,7 +68,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet6_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet6_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -73,7 +79,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet7_1.JPG",
         wall_image_url: "/assets/images/petroleum/pet7_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -83,7 +90,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet8_1.JPG",
         wall_image_url: "/assets/images/petroleum/pet8_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -93,7 +101,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet9_1.JPG",
         wall_image_url: "/assets/images/petroleum/pet9_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -103,7 +112,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet10_1.JPG",
         wall_image_url: "/assets/images/petroleum/pet10_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -113,7 +123,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet11_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet11_2.jpg",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -123,7 +134,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet12_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet12_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -133,7 +145,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet13_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet13_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -143,7 +156,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet14_1.JPG",
         wall_image_url: "/assets/images/petroleum/pet14_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -153,7 +167,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet15_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet15_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -163,7 +178,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet16_1.JPG",
         wall_image_url: "/assets/images/petroleum/pet16_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -173,7 +189,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet17_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet17_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -183,7 +200,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet18_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet18_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -193,7 +211,8 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet19_1.JPG",
         wall_image_url: "/assets/images/petroleum/pet19_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
     {
@@ -203,13 +222,14 @@ const STATIC_ARTWORKS = [
         image_url: "/assets/images/petroleum/pet20_1.PNG",
         wall_image_url: "/assets/images/petroleum/pet20_2.JPG",
         dimensions: "100x100x4",
-        medium: "Oil on canvas",
+        medium_en: "Flax, Petroleum",
+        medium_ru: "Лён, Нефть",
         year: "2025",
     },
 ];
 
 const Gallery = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [artworks, setArtworks] = useState([]);
     const [error, setError] = useState(null);
     const [imageCache, setImageCache] = useState({});
@@ -335,18 +355,17 @@ const Gallery = () => {
             <p className="text-2xl mb-8 w-full">{t('petroleumPaintings.text.regularParagraph5')}</p>
 
             <div className="gallery-container">
-                    <p className="text-red-500 text-center">{error}</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-                        {artworks.map((artwork) => (
-                            <div key={artwork.id} className="w-full">
-                                <ArtworkCard artwork={artwork} />
-                            </div>
-                        ))}
-                    </div>
+                <p className="text-red-500 text-center">{error}</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    {artworks.map((artwork) => (
+                        <div key={artwork.id} className="w-full">
+                            <ArtworkCard artwork={artwork} />
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
-
 };
 
 export default Gallery;
