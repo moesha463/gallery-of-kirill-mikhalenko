@@ -213,7 +213,6 @@ const Gallery = () => {
     const [artworks, setArtworks] = useState([]);
     const [error, setError] = useState(null);
     const [imageCache, setImageCache] = useState({});
-    const [loading, setLoading] = useState(true);
 
     const fetchArtworksFromApi = async () => {
         try {
@@ -336,13 +335,7 @@ const Gallery = () => {
             <p className="text-2xl mb-8 w-full">{t('petroleumPaintings.text.regularParagraph5')}</p>
 
             <div className="gallery-container">
-                {loading ? (
-                    <div className="page-loader">
-                        <div className="progress-bar"></div>
-                    </div>
-                ) : error ? (
                     <p className="text-red-500 text-center">{error}</p>
-                ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                         {artworks.map((artwork) => (
                             <div key={artwork.id} className="w-full">
@@ -350,7 +343,6 @@ const Gallery = () => {
                             </div>
                         ))}
                     </div>
-                )}
             </div>
         </div>
     );
