@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import './Biography.css';
 
 const Biography = () => {
@@ -72,7 +73,12 @@ const Biography = () => {
   });
 
   return (
-    <div className="container mx-auto px-6 py-12">
+    <motion.div className="container mx-auto px-6 py-12"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex flex-col items-center mb-12">
         <img
           src="/assets/images/icon.PNG"
@@ -125,7 +131,7 @@ const Biography = () => {
         <h2 className="text-2xl font-semibold text-center mb-8">
           {t("biography.eventsTitle", { defaultValue: "Key Events" })}
         </h2>
-        <div className="relative">
+        <div className="relative timeline-container">
           {events.length > 1 && (
             <div
               style={{
@@ -139,8 +145,8 @@ const Biography = () => {
           )}
 
           {events.map(([year, events], index) => (
-            <div key={year} className="mb-8 flex items-center relative">
-              <div className="pr-4 w-32 text-right overflow-hidden text-ellipsis whitespace-nowrap">
+            <div key={year} className="mb-8 flex items-center relative timeline-item">
+              <div className="pr-4 w-32 text-right overflow-hidden text-ellipsis whitespace-nowrap timeline-date">
                 <h3 className="text-lg font-medium text-gray-800">{year}</h3>
               </div>
 
@@ -149,8 +155,8 @@ const Biography = () => {
                 className="absolute w-4 h-4 bg-gray-600 rounded-full z-10"
               ></div>
 
-              <div className="pl-20 flex-1">
-                <div className="bg-gray-100 p-4 rounded-lg shadow-none hover:bg-gray-200 transition">
+              <div className="pl-20 flex-1 timeline-card">
+                <div className="bg-gray-100 p-4 shadow-none hover:bg-gray-200 transition">
                   {events.map((event, eventIndex) => (
                     <p key={eventIndex} className="text-lg text-gray-600 mb-2 last:mb-0">
                       {event}
@@ -171,7 +177,7 @@ const Biography = () => {
           {documents.map((doc) => (
             <div
               key={doc.id}
-              className="bg-gray-100 p-4 shadow-none cursor-pointer rounded-lg hover:bg-gray-200 transition"
+              className="bg-gray-100 p-4 shadow-none cursor-pointer  hover:bg-gray-200 transition"
               onClick={() => openFullscreen(doc)}
             >
               <img
@@ -208,7 +214,7 @@ const Biography = () => {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

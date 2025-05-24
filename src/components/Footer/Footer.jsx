@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { FaInstagram, FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaTelegram } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
@@ -12,22 +12,19 @@ const Footer = () => {
                 <div className="footer-logo uppercase">Kiryl Mikhalenka</div>
 
                 <div className="footer-socials">
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://instagram.com/mikhalenkakiryl" target="_blank" rel="noopener noreferrer">
                         <FaInstagram />
                     </a>
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://t.me/artistmio" target="_blank" rel="noopener noreferrer">
+                        <FaTelegram />
+                    </a>
+                    <a href="https://www.facebook.com/kiryl.mikhalenka" target="_blank" rel="noopener noreferrer">
                         <FaFacebookF />
-                    </a>
-                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedinIn />
-                    </a>
-                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                        <FaTwitter />
                     </a>
                 </div>
 
                 <div className="footer-email">
-                    <a href="mailto:info@mio.com"></a>
+                    <a href="mailto:miokirillartist@gmail.com">miokirillartist@gmail.com</a>
                 </div>
 
                 <p className="footer-text">© 2025</p>

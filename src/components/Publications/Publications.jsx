@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import './Publications.css'
@@ -45,7 +46,12 @@ const Publications = () => {
   };
 
   return (
-    <div className="container mx-auto px-6 py-12">
+    <motion.div className="container mx-auto px-6 py-12"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex flex-col items-center mb-12">
         <img
           src="/assets/images/icon.PNG"
@@ -79,7 +85,7 @@ const Publications = () => {
                 <img
                   src={photo.thumbnail}
                   alt="Collaboration Image"
-                  className="w-full h-full max-h-[400px] object-contain rounded-lg hover:opacity-80 transition-opacity"
+                  className="w-full h-full max-h-[400px] object-contain  hover:opacity-80 transition-opacity"
                 />
               </div>
             ))}
@@ -113,7 +119,7 @@ const Publications = () => {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

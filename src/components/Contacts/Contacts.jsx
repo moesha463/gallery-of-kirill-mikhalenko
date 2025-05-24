@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import "./Contacts.css";
@@ -63,7 +64,12 @@ const Contacts = () => {
   };
 
   return (
-    <div className="container mx-auto px-6 py-12 bg-white text-black">
+    <motion.div className="container mx-auto px-6 py-12 bg-white text-black"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex flex-col items-center mb-12">
         <img
           src="/assets/images/icon.PNG"
@@ -194,7 +200,7 @@ const Contacts = () => {
           </button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

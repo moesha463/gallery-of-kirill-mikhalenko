@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FaInstagram, FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaTelegram, FaFacebook } from "react-icons/fa";
 import './Header.css';
 
 const Header = () => {
@@ -67,7 +67,7 @@ const Header = () => {
           </div>
           <div className="social-links flex space-x-4 mt-4 md:mt-0 md:items-center">
             <a
-              href="https://www.instagram.com"
+              href="https://instagram.com/mikhalenkakiryl"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black hover:text-gray-700"
@@ -75,28 +75,20 @@ const Header = () => {
               <FaInstagram size={24} />
             </a>
             <a
-              href="https://www.facebook.com"
+              href="https://t.me/artistmio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black hover:text-gray-700"
+            >
+              <FaTelegram size={24} />
+            </a>
+            <a
+              href="https://www.facebook.com/kiryl.mikhalenka"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black hover:text-gray-700"
             >
               <FaFacebook size={24} />
-            </a>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-black hover:text-gray-700"
-            >
-              <FaTwitter size={24} />
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-black hover:text-gray-700"
-            >
-              <FaLinkedin size={24} />
             </a>
           </div>
         </div>

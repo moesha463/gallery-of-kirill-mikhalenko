@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
+import { motion } from "framer-motion";
 import './Collaborations.css'
 
 const COLLABORATION_DATA = {
@@ -69,7 +70,12 @@ const Collaborations = () => {
   };
 
   return (
-    <div className="container mx-auto px-6 py-12">
+    <motion.div className="container mx-auto px-6 py-12"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex flex-col items-center mb-12">
         <img
           src="/assets/images/icon.PNG"
@@ -103,7 +109,7 @@ const Collaborations = () => {
                 <img
                   src={photo.thumbnail}
                   alt="Collaboration Image"
-                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
+                  className="w-full h-full object-cover  hover:opacity-80 transition-opacity"
                 />
               </div>
             ))}
@@ -137,7 +143,7 @@ const Collaborations = () => {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

@@ -2,17 +2,21 @@
     font-family: UniversBold;
     src: url('../../assets/fonts/UniversBold.ttf');
 }
+
 @font-face {
     font-family: Univers;
     src: url('../../assets/fonts/UniversLight.ttf');
 }
-h2{
+
+h2 {
     font-family: UniversBold;
 }
-p{
+
+p {
     font-family: Univers;
     line-height: 1.5;
 }
+
 .gallery-container {
     position: relative;
     min-height: 100vh;
@@ -40,8 +44,13 @@ p{
 }
 
 @keyframes loading-animation {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .grid-container {
@@ -49,4 +58,21 @@ p{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     width: 100%;
+}
+
+.gallery-container {
+    margin-top: 2rem;
+}
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: 100vh;
+}
+
+.image-gallery-content {
+    width: 100%;
+}
+
+.image-gallery {
+    display: flex;
+    align-items: center;
 }
