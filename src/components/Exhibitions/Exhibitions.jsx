@@ -1,30 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import ImageGallery from "react-image-gallery";
-import { motion } from "framer-motion";
 import "react-image-gallery/styles/css/image-gallery.css";
-import './Exhibitions.css'
-
-const EXHIBITION_DATA = {
-  sections: [
-    {
-      id: 1,
-      name: "NFT Factory",
-      photos: [
-        { id: 101, original: "/assets/images/ex1.JPG", thumbnail: "/assets/images/ex1.JPG" },
-        { id: 102, original: "/assets/images/ex2.JPG", thumbnail: "/assets/images/ex2.JPG" },
-        { id: 103, original: "/assets/images/ex3.JPG", thumbnail: "/assets/images/ex3.JPG" },
-        { id: 104, original: "/assets/images/ex4.JPG", thumbnail: "/assets/images/ex4.JPG" },
-      ],
-    },
-  ],
-};
+import { motion } from "framer-motion";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";
+import './Exhibitions.css';
 
 const Exhibitions = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [sections, setSections] = useState([]);
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [galleryImages, setGalleryImages] = useState([]);
   const [startIndex, setStartIndex] = useState(0);
+
+  useEffect(() => {
+    const fetchSections = async () => {
+      const sectionsSnap = await getDocs(collection(db, "exhibitionSections"));
+      const sectionsData = await Promise.all(sectionsSnap.docs.map(async (sectionDoc) => {
+        const photosSnap = await getDocs(collection(db, `exhibitionSections/${sectionDoc.id}/photos`));
+        const photos = photosSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        return {
+          id: sectionDoc.id,
+          name: i18n.language === "ru" ? sectionDoc.data().name_ru : sectionDoc.data().name_en,
+          photos,
+        };
+      }));
+      setSections(sectionsData);
+    };
+    fetchSections();
+  }, [i18n.language]);
 
   const openGallery = (section, index) => {
     setGalleryImages(section.photos);
@@ -39,7 +44,8 @@ const Exhibitions = () => {
   };
 
   return (
-    <motion.div className="container mx-auto px-6 py-12"
+    <motion.div
+      className="container mx-auto px-6 py-12"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -58,9 +64,9 @@ const Exhibitions = () => {
         </div>
       </div>
 
-      {EXHIBITION_DATA.sections.map((section) => (
+      {sections.map((section) => (
         <div key={section.id} className="mb-12">
-          <h3 className="text-2xl font-medium text-center mb-6">{t('exhibition.paragraph')}</h3>
+          <h3 className="text-2xl font-medium text-center mb-6">{section.name}</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {section.photos.map((photo, index) => (
               <div
@@ -71,7 +77,7 @@ const Exhibitions = () => {
                 <img
                   src={photo.thumbnail}
                   alt="Exhibition Image"
-                  className="w-full h-full object-cover  hover:opacity-80 transition-opacity"
+                  className="w-full h-full object-cover hover:opacity-80 transition-opacity"
                 />
               </div>
             ))}
@@ -84,12 +90,15 @@ const Exhibitions = () => {
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 h-screen"
           onClick={closeGallery}
         >
-          <div className="relative w-full h-screen max-w-6xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="relative w-full h-screen max-w-6xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={closeGallery}
               className="absolute top-4 right-6 text-white text-4xl cursor-pointer z-10"
             >
-              &times;
+              ×
             </button>
             <ImageGallery
               items={galleryImages}

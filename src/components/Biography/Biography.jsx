@@ -1,35 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";
 import './Biography.css';
 
 const Biography = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [fullscreenDoc, setFullscreenDoc] = useState(null);
+  const [documents, setDocuments] = useState([]);
+  const [events, setEvents] = useState([]);
 
-  const documents = [
-    {
-      title: t("documents.award.title"),
-      description: t("documents.award.description"),
-      image: "/assets/images/docsAward.JPG",
-      imageAlt: t("documents.award.imageAlt"),
-      id: 1,
-    },
-    {
-      title: t("documents.thanks.title"),
-      description: t("documents.thanks.description"),
-      image: "/assets/images/docsThanks.JPG",
-      imageAlt: t("documents.thanks.imageAlt"),
-      id: 2,
-    },
-    {
-      title: t("documents.membership.title"),
-      description: t("documents.membership.description"),
-      image: "/assets/images/docsMembership.JPG",
-      imageAlt: t("documents.membership.imageAlt"),
-      id: 3,
-    },
-  ];
+  useEffect(() => {
+    const fetchData = async () => {
+      // Получение документов
+      const docsSnap = await getDocs(collection(db, "biographyDocuments"));
+      setDocuments(docsSnap.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+
+      // Получение событий
+      const eventsSnap = await getDocs(collection(db, "biographyEvents"));
+      const eventsData = eventsSnap.docs.reduce((acc, doc) => {
+        const { year, event_en, event_ru } = doc.data();
+        if (!acc[year]) acc[year] = [];
+        acc[year].push(i18n.language === "ru" ? event_ru : event_en);
+        return acc;
+      }, {});
+      setEvents(Object.entries(eventsData).sort(([yearA], [yearB]) => {
+        const priority = {
+          "Since 2025": 1, "С 2025": 1, "2018-2021": 2, "Education": 3, "Образование": 3,
+        };
+        const priorityA = priority[yearA] || 4;
+        const priorityB = priority[yearB] || 4;
+        if (priorityA !== 4 || priorityB !== 4) return priorityA - priorityB;
+        return parseInt(yearB) - parseInt(yearA);
+      }));
+    };
+    fetchData();
+  }, [i18n.language]);
 
   const openFullscreen = (doc) => {
     setFullscreenDoc(doc);
@@ -44,33 +51,6 @@ const Biography = () => {
       closeFullscreen();
     }
   };
-
-  const events = Object.entries(
-    t("biography.events", { returnObjects: true }).reduce((acc, event) => {
-      if (!acc[event.year]) {
-        acc[event.year] = [];
-      }
-      acc[event.year].push(event.event);
-      return acc;
-    }, {})
-  ).sort(([yearA], [yearB]) => {
-    const priority = {
-      "С 2025": 1,
-      "2018-2021": 2,
-      "Образование": 3,
-      "Since 2025": 1,
-      "Education": 3,
-    };
-
-    const priorityA = priority[yearA] || 4;
-    const priorityB = priority[yearB] || 4;
-
-    if (priorityA !== 4 || priorityB !== 4) {
-      return priorityA - priorityB;
-    }
-
-    return parseInt(yearB) - parseInt(yearA);
-  });
 
   return (
     <motion.div className="container mx-auto px-6 py-12"
@@ -91,7 +71,6 @@ const Biography = () => {
           </h1>
         </div>
       </div>
-
 
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row gap-8 items-stretch">
@@ -129,7 +108,7 @@ const Biography = () => {
 
       <div className="mt-12 max-w-5xl mx-auto">
         <h2 className="text-2xl font-semibold text-center mb-8">
-          {t("biography.eventsTitle", { defaultValue: "Key Events" })}
+          {t("biography.eventsTitle", { defaultValue: "Ключевые события" })}
         </h2>
         <div className="relative timeline-container">
           {events.length > 1 && (
@@ -177,16 +156,16 @@ const Biography = () => {
           {documents.map((doc) => (
             <div
               key={doc.id}
-              className="bg-gray-100 p-4 shadow-none cursor-pointer  hover:bg-gray-200 transition"
+              className="bg-gray-100 p-4 shadow-none cursor-pointer hover:bg-gray-200 transition"
               onClick={() => openFullscreen(doc)}
             >
               <img
                 src={doc.image}
-                alt={doc.imageAlt}
+                alt={i18n.language === "ru" ? doc.imageAlt_ru : doc.imageAlt_en}
                 className="w-full h-32 object-contain mb-4"
               />
               <h3 style={{ lineHeight: 1.2 }} className="text-lg font-medium">
-                {doc.title}
+                {i18n.language === "ru" ? doc.title_ru : doc.title_en}
               </h3>
             </div>
           ))}
@@ -207,7 +186,7 @@ const Biography = () => {
             </button>
             <img
               src={fullscreenDoc.image}
-              alt={fullscreenDoc.imageAlt}
+              alt={i18n.language === "ru" ? fullscreenDoc.imageAlt_ru : fullscreenDoc.imageAlt_en}
               className="w-full h-full object-contain"
               onClick={(e) => e.stopPropagation()}
             />

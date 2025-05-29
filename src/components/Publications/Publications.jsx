@@ -1,37 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import './Publications.css'
-
-const PUBLICATIONS_DATA = {
-  sections: [
-    {
-      id: 1,
-      name: "publications.title1",
-      photos: [
-        { id: 101, original: "/assets/images/pub1.JPG", thumbnail: "/assets/images/pub1.JPG" },
-        { id: 102, original: "/assets/images/pub2.JPG", thumbnail: "/assets/images/pub2.JPG" },
-      ],
-    },
-    {
-      id: 2,
-      name: "publications.title2",
-      photos: [
-        { id: 103, original: "/assets/images/pub5.JPG", thumbnail: "/assets/images/pub5.JPG" },
-        { id: 101, original: "/assets/images/pub3.JPG", thumbnail: "/assets/images/pub3.JPG" },
-        { id: 102, original: "/assets/images/pub4.JPG", thumbnail: "/assets/images/pub4.JPG" },
-      ],
-    },
-  ],
-};
+import { motion } from "framer-motion";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";
+import './Publications.css';
 
 const Publications = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [sections, setSections] = useState([]);
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [galleryImages, setGalleryImages] = useState([]);
   const [startIndex, setStartIndex] = useState(0);
+
+  useEffect(() => {
+    const fetchSections = async () => {
+      const sectionsSnap = await getDocs(collection(db, "publicationSections"));
+      const sectionsData = await Promise.all(sectionsSnap.docs.map(async (sectionDoc) => {
+        const photosSnap = await getDocs(collection(db, `publicationSections/${sectionDoc.id}/photos`));
+        const photos = photosSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        return {
+          id: sectionDoc.id,
+          name: i18n.language === "ru" ? sectionDoc.data().name_ru : sectionDoc.data().name_en,
+          photos,
+        };
+      }));
+      setSections(sectionsData);
+    };
+    fetchSections();
+  }, [i18n.language]);
 
   const openGallery = (section, index) => {
     setGalleryImages(section.photos);
@@ -46,7 +44,8 @@ const Publications = () => {
   };
 
   return (
-    <motion.div className="container mx-auto px-6 py-12"
+    <motion.div
+      className="container mx-auto px-6 py-12"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -65,17 +64,19 @@ const Publications = () => {
         </div>
       </div>
 
-      {PUBLICATIONS_DATA.sections.map((section) => (
+      {sections.map((section) => (
         <div key={section.id} className="mb-24">
-          <h3 className="text-2xl font-medium text-center mb-6">{t(section.name)}</h3>
+          <h3 className="text-2xl font-medium text-center mb-6">{section.name}</h3>
           <div
-            className={`grid gap-6 ${section.photos.length === 3 ? "grid-cols-3 max-md:grid-cols-1" :
-                section.photos.length === 4 ? "grid-cols-4 max-md:grid-cols-1" :
-                  section.photos.length === 6 ? "grid-cols-3 max-md:grid-cols-1" :
-                    "grid-cols-2 max-md:grid-cols-1"
+            className={`grid gap-6 ${section.photos.length === 3
+                ? "grid-cols-3 max-md:grid-cols-1"
+                : section.photos.length === 4
+                  ? "grid-cols-4 max-md:grid-cols-1"
+                  : section.photos.length === 6
+                    ? "grid-cols-3 max-md:grid-cols-1"
+                    : "grid-cols-2 max-md:grid-cols-1"
               }`}
           >
-
             {section.photos.map((photo, index) => (
               <div
                 key={photo.id}
@@ -84,8 +85,8 @@ const Publications = () => {
               >
                 <img
                   src={photo.thumbnail}
-                  alt="Collaboration Image"
-                  className="w-full h-full max-h-[400px] object-contain  hover:opacity-80 transition-opacity"
+                  alt="Publication Image"
+                  className="w-full h-full max-h-[400px] object-contain hover:opacity-80 transition-opacity"
                 />
               </div>
             ))}
@@ -93,19 +94,20 @@ const Publications = () => {
         </div>
       ))}
 
-
-
       {galleryOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 h-screen"
           onClick={closeGallery}
         >
-          <div className="relative w-full h-screen max-w-6xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="relative w-full h-screen max-w-6xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={closeGallery}
               className="absolute top-4 right-6 text-white text-4xl cursor-pointer z-10"
             >
-              &times;
+              ×
             </button>
             <ImageGallery
               items={galleryImages}

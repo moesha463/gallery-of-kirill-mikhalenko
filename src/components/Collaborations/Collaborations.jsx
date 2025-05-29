@@ -1,61 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { motion } from "framer-motion";
-import './Collaborations.css'
-
-const COLLABORATION_DATA = {
-  sections: [
-    {
-      id: 1,
-      name: "collaboration.paragraph1",
-      photos: [
-        { id: 101, original: "/assets/images/col1.jpg", thumbnail: "/assets/images/col1.jpg" },
-        { id: 102, original: "/assets/images/col2.jpg", thumbnail: "/assets/images/col2.jpg" },
-        { id: 103, original: "/assets/images/col3.jpg", thumbnail: "/assets/images/col3.jpg" },
-        { id: 104, original: "/assets/images/col4.jpg", thumbnail: "/assets/images/col4.jpg" },
-      ],
-    },
-    {
-      id: 2,
-      name: "collaboration.paragraph2",
-      photos: [
-        { id: 101, original: "/assets/images/col9.JPG", thumbnail: "/assets/images/col9.JPG" },
-        { id: 102, original: "/assets/images/col10.JPG", thumbnail: "/assets/images/col10.JPG" },
-        { id: 103, original: "/assets/images/col11.JPG", thumbnail: "/assets/images/col11.JPG" },
-        { id: 104, original: "/assets/images/col12.JPG", thumbnail: "/assets/images/col12.JPG" },
-        { id: 105, original: "/assets/images/col13.JPG", thumbnail: "/assets/images/col13.JPG" },
-        { id: 106, original: "/assets/images/col14.JPG", thumbnail: "/assets/images/col14.JPG" },
-      ],
-    },
-    {
-      id: 3,
-      name: "collaboration.paragraph3",
-      photos: [
-        { id: 101, original: "/assets/images/col5.jpg", thumbnail: "/assets/images/col5.jpg" },
-        { id: 102, original: "/assets/images/col6.PNG", thumbnail: "/assets/images/col6.PNG" },
-        { id: 103, original: "/assets/images/col7.PNG", thumbnail: "/assets/images/col7.PNG" },
-        { id: 104, original: "/assets/images/col8.PNG", thumbnail: "/assets/images/col8.PNG" },
-      ],
-    },
-    {
-      id: 4,
-      name: "collaboration.paragraph4",
-      photos: [
-        { id: 101, original: "/assets/images/col15.jpg", thumbnail: "/assets/images/col15.jpg" },
-        { id: 102, original: "/assets/images/col16.jpg", thumbnail: "/assets/images/col16.jpg" },
-        { id: 103, original: "/assets/images/col17.jpg", thumbnail: "/assets/images/col17.jpg" },
-      ],
-    },
-  ],
-};
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";
+import './Collaborations.css';
 
 const Collaborations = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [sections, setSections] = useState([]);
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [galleryImages, setGalleryImages] = useState([]);
   const [startIndex, setStartIndex] = useState(0);
+
+  useEffect(() => {
+    const fetchSections = async () => {
+      const sectionsSnap = await getDocs(collection(db, "collaborationSections"));
+      const sectionsData = await Promise.all(sectionsSnap.docs.map(async (sectionDoc) => {
+        const photosSnap = await getDocs(collection(db, `collaborationSections/${sectionDoc.id}/photos`));
+        const photos = photosSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        return {
+          id: sectionDoc.id,
+          name: i18n.language === "ru" ? sectionDoc.data().name_ru : sectionDoc.data().name_en,
+          photos,
+        };
+      }));
+      setSections(sectionsData);
+    };
+    fetchSections();
+  }, [i18n.language]);
 
   const openGallery = (section, index) => {
     setGalleryImages(section.photos);
@@ -70,7 +44,8 @@ const Collaborations = () => {
   };
 
   return (
-    <motion.div className="container mx-auto px-6 py-12"
+    <motion.div
+      className="container mx-auto px-6 py-12"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -89,17 +64,19 @@ const Collaborations = () => {
         </div>
       </div>
 
-      {COLLABORATION_DATA.sections.map((section) => (
+      {sections.map((section) => (
         <div key={section.id} className="mb-24">
-          <h3 className="text-2xl font-medium text-center mb-6">{t(section.name)}</h3>
+          <h3 className="text-2xl font-medium text-center mb-6">{section.name}</h3>
           <div
-            className={`grid gap-6 ${section.photos.length === 3 ? "grid-cols-3 max-md:grid-cols-1" :
-                section.photos.length === 4 ? "grid-cols-4 max-md:grid-cols-1" :
-                  section.photos.length === 6 ? "grid-cols-3 max-md:grid-cols-1" :
-                    "grid-cols-2 max-md:grid-cols-1"
+            className={`grid gap-6 ${section.photos.length === 3
+                ? "grid-cols-3 max-md:grid-cols-1"
+                : section.photos.length === 4
+                  ? "grid-cols-4 max-md:grid-cols-1"
+                  : section.photos.length === 6
+                    ? "grid-cols-3 max-md:grid-cols-1"
+                    : "grid-cols-2 max-md:grid-cols-1"
               }`}
           >
-
             {section.photos.map((photo, index) => (
               <div
                 key={photo.id}
@@ -109,7 +86,7 @@ const Collaborations = () => {
                 <img
                   src={photo.thumbnail}
                   alt="Collaboration Image"
-                  className="w-full h-full object-cover  hover:opacity-80 transition-opacity"
+                  className="w-full h-full object-cover hover:opacity-80 transition-opacity"
                 />
               </div>
             ))}
@@ -117,19 +94,20 @@ const Collaborations = () => {
         </div>
       ))}
 
-
-
       {galleryOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 h-screen"
           onClick={closeGallery}
         >
-          <div className="relative w-full h-screen max-w-6xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="relative w-full h-screen max-w-6xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={closeGallery}
               className="absolute top-4 right-6 text-white text-4xl cursor-pointer z-10"
             >
-              &times;
+              ×
             </button>
             <ImageGallery
               items={galleryImages}

@@ -154,5 +154,24 @@
             "item1": "How can we balance resource consumption with care for the planet?",
             "item2": "What steps should we take to transition to more sustainable energy sources?"
         }
+    },
+    "admin": {
+        "loginTitle": "Admin Login",
+        "email": "Email",
+        "password": "Password",
+        "loginButton": "Login",
+        "loginError": "Invalid email or password",
+        "dashboardTitle": "Admin Dashboard",
+        "biography": "Biography",
+        "gallery": "Gallery",
+        "exhibitions": "Exhibitions",
+        "collaborations": "Collaborations",
+        "publications": "Publications",
+        "logout": "Logout",
+        "events": "Events",
+        "texts": "Texts",
+        "documents": "Documents",
+        "add": "Add",
+        "delete": "Delete"
     }
 }
